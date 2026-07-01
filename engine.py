@@ -36,6 +36,7 @@ POLL_SECONDS = 30
 CAPTURE_SEC = 150            # bet only in first 2.5 min of a window
 TAIL_Q = 0.10                # extreme tails: top/bottom 10%
 CONF_UP, CONF_DN = 0.52, 0.48
+MAX_ENTRY = 0.53            # backtest: giris >~0.52 ise edge olur; ustunu ALMA (skip+logla)
 TRAIN_DAYS = 90
 ASSETS = {"BTC": ("BTCUSDT", "KXBTC15M"), "ETH": ("ETHUSDT", "KXETH15M")}
 KALSHI = "https://api.elections.kalshi.com/trade-api/v2"
@@ -256,6 +257,8 @@ def main():
 
     pending = {k: v for k, v in (prev.get("pending") or {}).items()}
     seen = set(tuple(x) for x in (prev.get("seen") or []))
+    openings = prev.get("openings") or []      # her pencerenin acilis ask kaydi (formul dogrulama)
+    skips = prev.get("skips") or {"price": 0, "no_signal": 0}
     current = {}
     last_push = 0.0
 
@@ -286,6 +289,8 @@ def main():
                 "equity": [round(x, 4) for x in eq],
             },
             "recent_trades": trades[-30:][::-1],
+            "openings": openings[-120:],
+            "skips": skips,
             "pending": pending,
             "seen": [list(x) for x in list(seen)[-200:]],
             "all_trades": trades,
@@ -337,12 +342,20 @@ def main():
                 if key in seen or str(key) in pending:
                     continue
                 if in_cap:
-                    if side and px:
+                    openings.append({"asset": asset, "window_end": ct,
+                                     "yes_ask": mkt["yes_ask"], "no_ask": mkt["no_ask"],
+                                     "prev_ret": round(r1, 5), "secs_in": round(secs_in)})
+                    if side and px and px <= MAX_ENTRY:
                         pending[str(key)] = {"asset": asset, "ticker": mkt["ticker"],
                                              "close_iso": ct, "side": side, "entry": px,
                                              "prob": round(prob, 4), "prev_ret": round(r1, 5)}
                         log(f"PAPER-ENTER {asset} {ct} {side} @ {px} (prob={prob:.3f} r1={r1:+.5f})")
+                    elif side and px:
+                        skips["price"] += 1
+                        seen.add(key)
+                        log(f"SKIP-PRICE {asset} {ct} {side} ask={px} > {MAX_ENTRY}")
                     else:
+                        skips["no_signal"] += 1
                         seen.add(key)
             except Exception as e:
                 log(f"warn capture {asset}: {repr(e)[:90]}")
