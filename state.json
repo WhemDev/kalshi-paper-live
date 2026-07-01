@@ -1,31 +1,31 @@
 {
- "updated": "2026-07-01T22:59:26.704282+00:00",
+ "updated": "2026-07-01T23:00:59.555599+00:00",
  "campaign_deadline": "2026-07-02T09:24:41.926379+00:00",
  "mode": "PAPER (auto-entry, real Kalshi ask + real settlement)",
  "strategy": "extreme-tails 10% + model confirm | Kalshi 15m",
  "current": {
   "BTC": {
-   "ticker": "KXBTC15M-26JUL011900-00",
-   "window_end": "2026-07-01T23:00:00Z",
-   "secs_in": 867,
-   "prob_up": 0.5166,
-   "prev_ret": -0.00131,
+   "ticker": "KXBTC15M-26JUL011915-15",
+   "window_end": "2026-07-01T23:15:00Z",
+   "secs_in": 59,
+   "prob_up": 0.5044,
+   "prev_ret": 0.00054,
    "tail_lo": -0.00245,
    "tail_hi": 0.00211,
-   "yes_ask": 0.58,
-   "no_ask": 0.43,
+   "yes_ask": 0.28,
+   "no_ask": 0.73,
    "signal": "WAIT"
   },
   "ETH": {
-   "ticker": "KXETH15M-26JUL011900-00",
-   "window_end": "2026-07-01T23:00:00Z",
-   "secs_in": 867,
-   "prob_up": 0.5173,
-   "prev_ret": -0.00113,
+   "ticker": "KXETH15M-26JUL011915-15",
+   "window_end": "2026-07-01T23:15:00Z",
+   "secs_in": 59,
+   "prob_up": 0.5199,
+   "prev_ret": -0.00161,
    "tail_lo": -0.00277,
    "tail_hi": 0.00261,
-   "yes_ask": 0.001,
-   "no_ask": 1.0,
+   "yes_ask": 0.23,
+   "no_ask": 0.78,
    "signal": "WAIT"
   }
  },
@@ -115,11 +115,27 @@
    "no_ask": 0.55,
    "prev_ret": -0.00113,
    "secs_in": 31
+  },
+  {
+   "asset": "ETH",
+   "window_end": "2026-07-01T23:15:00Z",
+   "yes_ask": 0.33,
+   "no_ask": 0.69,
+   "prev_ret": -0.00161,
+   "secs_in": 29
+  },
+  {
+   "asset": "BTC",
+   "window_end": "2026-07-01T23:15:00Z",
+   "yes_ask": 0.28,
+   "no_ask": 0.73,
+   "prev_ret": 0.00054,
+   "secs_in": 59
   }
  ],
  "skips": {
   "price": 0,
-  "no_signal": 6
+  "no_signal": 8
  },
  "pending": {},
  "seen": [
@@ -138,6 +154,10 @@
   [
    "ETH",
    "2026-07-01T22:15:00Z"
+  ],
+  [
+   "ETH",
+   "2026-07-01T23:15:00Z"
   ],
   [
    "BTC",
@@ -162,6 +182,10 @@
   [
    "ETH",
    "2026-07-01T22:45:00Z"
+  ],
+  [
+   "BTC",
+   "2026-07-01T23:15:00Z"
   ],
   [
    "BTC",
