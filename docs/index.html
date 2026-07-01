@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Kalshi Uç-Kuyruk · Cloud Paper Trading</title>
+<style>
+  :root{--bg:#0d1117;--card:#161b22;--bd:#30363d;--fg:#e6edf3;--mut:#8b949e;
+        --grn:#3fb950;--red:#f85149;--yel:#d29922;--blu:#58a6ff;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--fg);font:14px/1.5 ui-monospace,Menlo,Consolas,monospace;padding:18px;max-width:1200px;margin:0 auto}
+  h1{font-size:18px;font-weight:700}
+  .sub{color:var(--mut);font-size:12px;margin-top:2px}
+  .row{display:flex;gap:14px;flex-wrap:wrap;margin-top:14px}
+  .card{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:14px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;width:100%}
+  .kpi .v{font-size:24px;font-weight:700}
+  .kpi .l{color:var(--mut);font-size:11px;text-transform:uppercase;letter-spacing:.04em}
+  table{width:100%;border-collapse:collapse;font-size:12.5px}
+  th,td{text-align:right;padding:6px 8px;border-bottom:1px solid var(--bd)}
+  th:first-child,td:first-child{text-align:left}
+  th{color:var(--mut);font-weight:600;font-size:11px;text-transform:uppercase}
+  .grn{color:var(--grn)} .red{color:var(--red)} .yel{color:var(--yel)} .blu{color:var(--blu)} .mut{color:var(--mut)}
+  .pill{display:inline-block;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:700}
+  .pill.buy{background:rgba(63,185,80,.15);color:var(--grn);border:1px solid var(--grn)}
+  .pill.wait{background:rgba(139,148,158,.12);color:var(--mut);border:1px solid var(--bd)}
+  .pill.late{background:rgba(210,153,34,.12);color:var(--yel);border:1px solid var(--yel)}
+  .half{flex:1 1 420px} .full{flex:1 1 100%}
+  .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--grn);margin-right:6px;animation:p 1.6s infinite}
+  .dot.stale{background:var(--red);animation:none}
+  @keyframes p{0%,100%{opacity:1}50%{opacity:.3}}
+</style>
+</head>
+<body>
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap">
+    <div>
+      <h1><span class="dot" id="dot"></span>Kalshi Uç-Kuyruk Stratejisi · Cloud Paper</h1>
+      <div class="sub" id="meta">yükleniyor…</div>
+    </div>
+    <div class="sub" style="text-align:right">
+      <div id="clock"></div>
+      <div id="deadline" class="yel"></div>
+    </div>
+  </div>
+
+  <div class="row grid" id="kpis"></div>
+
+  <div class="row">
+    <div class="card full">
+      <div class="l mut" style="margin-bottom:8px">ANLIK PENCERELER · kural: prev_ret uç %10 kuyrukta + model onayı → gerçek Kalshi ask ile otomatik paper-giriş</div>
+      <table id="current"></table>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="card half">
+      <div class="l mut" style="margin-bottom:8px">EŞİTLİK EĞRİSİ (kümülatif PnL / kontrat)</div>
+      <svg id="equity" viewBox="0 0 600 200" width="100%" height="200"></svg>
+    </div>
+    <div class="card half">
+      <div class="l mut" style="margin-bottom:8px">AÇIK (bekleyen) PAPER POZİSYONLAR</div>
+      <table id="pending"></table>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="card full">
+      <div class="l mut" style="margin-bottom:8px">KAPANMIŞ İŞLEMLER (son 30) · <a class="blu" id="csvlink" href="#">trades.csv indir</a></div>
+      <table id="trades"></table>
+    </div>
+  </div>
+
+<script>
+const RAW_BASE=location.hostname.endsWith('github.io')
+  ? 'https://raw.githubusercontent.com/'+location.pathname.split('/')[1].replace(/\/$/,'')+'/'
+  : null;
+// path on github.io is /<repo>/ ; owner is subdomain
+function stateUrl(){
+  if(location.hostname.endsWith('github.io')){
+    const owner=location.hostname.split('.')[0];
+    const repo=location.pathname.split('/').filter(Boolean)[0];
+    return `https://raw.githubusercontent.com/${owner}/${repo}/state/state.json`;
+  }
+  return 'state.json'; // local test
+}
+function csvUrl(){
+  if(location.hostname.endsWith('github.io')){
+    const owner=location.hostname.split('.')[0];
+    const repo=location.pathname.split('/').filter(Boolean)[0];
+    return `https://raw.githubusercontent.com/${owner}/${repo}/state/trades.csv`;
+  }
+  return 'trades.csv';
+}
+const $=id=>document.getElementById(id);
+const f=(x,d=2)=>x==null?'—':Number(x).toFixed(d);
+const cls=x=>x==null?'mut':(x>0?'grn':(x<0?'red':'mut'));
+let lastUpd=null;
+function kpi(l,v,c=''){return `<div class="card kpi"><div class="l">${l}</div><div class="v ${c}">${v}</div></div>`;}
+function drawEq(eq){
+  const svg=$('equity');svg.innerHTML='';
+  if(!eq||eq.length<2){svg.innerHTML='<text x=300 y=100 fill="#8b949e" text-anchor="middle">veri bekleniyor…</text>';return;}
+  const W=600,H=200,p=24,mn=Math.min(0,...eq),mx=Math.max(0,...eq),r=(mx-mn)||1;
+  const X=i=>p+i*(W-2*p)/(eq.length-1),Y=v=>H-p-(v-mn)*(H-2*p)/r;
+  svg.innerHTML+=`<line x1=${p} y1=${Y(0)} x2=${W-p} y2=${Y(0)} stroke="#30363d" stroke-dasharray="3 3"/>`;
+  let d='M'+X(0)+' '+Y(eq[0]);eq.forEach((v,i)=>d+=' L'+X(i)+' '+Y(v));
+  svg.innerHTML+=`<path d="${d}" fill="none" stroke="${eq[eq.length-1]>=0?'#3fb950':'#f85149'}" stroke-width="2"/>`;
+  svg.innerHTML+=`<text x=${p} y=14 fill="#8b949e" font-size=11>maks ${f(mx,3)}</text>`;
+  svg.innerHTML+=`<text x=${p} y=${H-4} fill="#8b949e" font-size=11>min ${f(mn,3)}</text>`;
+}
+function render(s){
+  lastUpd=new Date(s.updated);
+  $('meta').textContent=`${s.strategy} · ${s.mode}`;
+  if(s.campaign_deadline){
+    const dl=new Date(s.campaign_deadline), ms=dl-Date.now();
+    $('deadline').textContent= ms>0 ? `kampanya bitişine ${(ms/3600000).toFixed(1)} saat` : 'kampanya tamamlandı';
+  }
+  const st=s.stats||{};
+  $('kpis').innerHTML=[
+    kpi('Bahis',st.bets??0),
+    kpi('Kazanma %',st.winrate==null?'—':(100*st.winrate).toFixed(1)+'%',st.winrate>0.5?'grn':(st.winrate==null?'':'red')),
+    kpi('Toplam PnL',f(st.total_pnl,3),cls(st.total_pnl)),
+    kpi('Ort PnL/bahis',f(st.avg_pnl,4),cls(st.avg_pnl)),
+    kpi('Maks DD',f(st.max_drawdown,3),'yel'),
+    kpi('Açık poz.',Object.keys(s.pending||{}).length,'blu'),
+  ].join('');
+  let ch='<tr><th>Varlık</th><th>Pencere sonu</th><th>±sn</th><th>P(up)</th><th>prev_ret</th><th>kuyruk alt/üst</th><th>YES ask</th><th>NO ask</th><th>Sinyal</th></tr>';
+  for(const a in (s.current||{})){const c=s.current[a];
+    const pc = c.signal&&c.signal.startsWith('ENTER')?'buy':(c.signal==='signal-but-late'?'late':'wait');
+    ch+=`<tr><td><b>${a}</b></td><td class=mut>${(c.window_end||'').slice(11,16)}</td><td class=mut>${c.secs_in}</td>
+      <td class="${c.prob_up>0.5?'grn':'red'}">${f(c.prob_up,3)}</td>
+      <td class="${c.prev_ret>0?'grn':'red'}">${(100*c.prev_ret).toFixed(3)}%</td>
+      <td class=mut>${(100*c.tail_lo).toFixed(2)}% / ${(100*c.tail_hi).toFixed(2)}%</td>
+      <td>${f(c.yes_ask)}</td><td>${f(c.no_ask)}</td>
+      <td><span class="pill ${pc}">${c.signal||'—'}</span></td></tr>`;}
+  $('current').innerHTML=ch;
+  let ph='<tr><th>Varlık</th><th>Pencere</th><th>Taraf</th><th>Giriş</th><th>P(up)</th></tr>';
+  let anyP=false;
+  for(const k in (s.pending||{})){const p=s.pending[k];anyP=true;
+    ph+=`<tr><td><b>${p.asset}</b></td><td class=mut>${(p.close_iso||'').slice(11,16)}</td><td>${p.side}</td><td>${f(p.entry)}</td><td>${f(p.prob,3)}</td></tr>`;}
+  $('pending').innerHTML=anyP?ph:'<tr><td class=mut>açık pozisyon yok</td></tr>';
+  let th='<tr><th>Zaman</th><th>Varlık</th><th>Taraf</th><th>Giriş</th><th>Fee</th><th>Sonuç</th><th>PnL</th></tr>';
+  (s.recent_trades||[]).forEach(t=>{th+=`<tr><td class=mut>${(t.ts||'').slice(11,19)}</td><td>${t.asset}</td>
+    <td>${t.side}</td><td>${f(t.entry)}</td><td class=mut>${f(t.fee,3)}</td>
+    <td class="${t.resolved_up?'grn':'red'}">${t.resolved_up?'UP':'DOWN'}</td>
+    <td class="${cls(t.pnl)}">${t.pnl>0?'+':''}${f(t.pnl,3)}</td></tr>`;});
+  $('trades').innerHTML=th;
+  drawEq(st.equity);
+  $('csvlink').href=csvUrl();
+}
+async function tick(){
+  try{
+    const r=await fetch(stateUrl()+'?_='+Math.floor(Date.now()/30000));
+    if(!r.ok)throw 0;
+    render(await r.json());
+  }catch(e){$('meta').innerHTML='<span class=red>state okunamadı — motor henüz başlamadı olabilir</span>';}
+}
+setInterval(()=>{
+  if(lastUpd){
+    const ago=Math.round((Date.now()-lastUpd)/1000);
+    $('clock').textContent='son motor güncellemesi '+(ago>120?Math.round(ago/60)+'dk':ago+'sn')+' önce';
+    $('dot').className='dot'+(ago>300?' stale':'');
+  }
+},1000);
+tick();setInterval(tick,30000);
+</script>
+</body>
+</html>
