@@ -266,9 +266,11 @@ def main():
         nonlocal last_push
         if not force and time.time() - last_push < 90:
             return
-        wins = sum(1 for t in trades if t["pnl"] > 0)
-        nb = len(trades)
-        eq = list(np.cumsum([t["pnl"] for t in trades])) if trades else []
+        real = [t for t in trades if not t.get("shadow")]
+        shadow = [t for t in trades if t.get("shadow")]
+        wins = sum(1 for t in real if t["pnl"] > 0)
+        nb = len(real)
+        eq = list(np.cumsum([t["pnl"] for t in real])) if real else []
         maxdd = 0.0
         pk = -1e9
         for v in eq:
@@ -283,12 +285,15 @@ def main():
             "stats": {
                 "bets": nb, "wins": wins,
                 "winrate": round(wins / nb, 4) if nb else None,
-                "total_pnl": round(sum(t["pnl"] for t in trades), 4),
-                "avg_pnl": round(sum(t["pnl"] for t in trades) / nb, 4) if nb else None,
+                "total_pnl": round(sum(t["pnl"] for t in real), 4),
+                "avg_pnl": round(sum(t["pnl"] for t in real) / nb, 4) if nb else None,
+                "shadow_bets": len(shadow),
+                "shadow_pnl": round(sum(t["pnl"] for t in shadow), 4) if shadow else 0.0,
+                "shadow_winrate": round(sum(1 for t in shadow if t["pnl"] > 0) / len(shadow), 4) if shadow else None,
                 "max_drawdown": round(maxdd, 4),
                 "equity": [round(x, 4) for x in eq],
             },
-            "recent_trades": trades[-30:][::-1],
+            "recent_trades": [dict(t, side=(t["side"] + " (G)" if t.get("shadow") else t["side"])) for t in trades[-30:]][::-1],
             "openings": openings[-120:],
             "skips": skips,
             "pending": pending,
@@ -352,8 +357,11 @@ def main():
                         log(f"PAPER-ENTER {asset} {ct} {side} @ {px} (prob={prob:.3f} r1={r1:+.5f})")
                     elif side and px:
                         skips["price"] += 1
-                        seen.add(key)
-                        log(f"SKIP-PRICE {asset} {ct} {side} ask={px} > {MAX_ENTRY}")
+                        pending[str(key)] = {"asset": asset, "ticker": mkt["ticker"],
+                                             "close_iso": ct, "side": side, "entry": px,
+                                             "prob": round(prob, 4), "prev_ret": round(r1, 5),
+                                             "shadow": True}
+                        log(f"SHADOW-ENTER {asset} {ct} {side} @ {px} (>{MAX_ENTRY}, golge)")
                     else:
                         skips["no_signal"] += 1
                         seen.add(key)
@@ -379,7 +387,8 @@ def main():
                            "ticker": info["ticker"], "side": info["side"],
                            "entry": info["entry"], "fee": round(fee, 4),
                            "prob": info["prob"], "prev_ret": info["prev_ret"],
-                           "resolved_up": res, "pnl": pnl})
+                           "resolved_up": res, "pnl": pnl,
+                           "shadow": bool(info.get("shadow"))})
             pending.pop(skey, None)
             seen.add((info["asset"], info["close_iso"]))
             log(f"RESOLVE {info['asset']} {info['side']} -> {'UP' if res else 'DOWN'} "
