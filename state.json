@@ -1,31 +1,31 @@
 {
- "updated": "2026-07-02T05:58:54.081145+00:00",
+ "updated": "2026-07-02T06:00:26.039221+00:00",
  "campaign_deadline": "2026-07-02T09:24:41.926379+00:00",
  "mode": "PAPER (auto-entry, real Kalshi ask + real settlement)",
  "strategy": "extreme-tails 10% + model confirm | Kalshi 15m",
  "current": {
   "BTC": {
-   "ticker": "KXBTC15M-26JUL020200-00",
-   "window_end": "2026-07-02T06:00:00Z",
-   "secs_in": 834,
-   "prob_up": 0.5301,
-   "prev_ret": -0.00214,
+   "ticker": "KXBTC15M-26JUL020215-15",
+   "window_end": "2026-07-02T06:15:00Z",
+   "secs_in": 26,
+   "prob_up": 0.5171,
+   "prev_ret": -0.00165,
    "tail_lo": -0.00239,
-   "tail_hi": 0.00245,
-   "yes_ask": 0.004,
-   "no_ask": 0.997,
+   "tail_hi": 0.00244,
+   "yes_ask": 0.53,
+   "no_ask": 0.51,
    "signal": "WAIT"
   },
   "ETH": {
-   "ticker": "KXETH15M-26JUL020200-00",
-   "window_end": "2026-07-02T06:00:00Z",
-   "secs_in": 834,
-   "prob_up": 0.5511,
-   "prev_ret": -0.00143,
+   "ticker": "KXETH15M-26JUL020215-15",
+   "window_end": "2026-07-02T06:15:00Z",
+   "secs_in": 26,
+   "prob_up": 0.546,
+   "prev_ret": 7e-05,
    "tail_lo": -0.00269,
    "tail_hi": 0.00279,
-   "yes_ask": 0.072,
-   "no_ask": 0.956,
+   "yes_ask": 0.47,
+   "no_ask": 0.54,
    "signal": "WAIT"
   }
  },
@@ -661,11 +661,27 @@
    "no_ask": 0.54,
    "prev_ret": -0.00214,
    "secs_in": 64
+  },
+  {
+   "asset": "BTC",
+   "window_end": "2026-07-02T06:15:00Z",
+   "yes_ask": 0.53,
+   "no_ask": 0.51,
+   "prev_ret": -0.00165,
+   "secs_in": 26
+  },
+  {
+   "asset": "ETH",
+   "window_end": "2026-07-02T06:15:00Z",
+   "yes_ask": 0.47,
+   "no_ask": 0.54,
+   "prev_ret": 7e-05,
+   "secs_in": 26
   }
  ],
  "skips": {
   "price": 4,
-  "no_signal": 54
+  "no_signal": 56
  },
  "pending": {},
  "seen": [
@@ -752,6 +768,10 @@
   [
    "BTC",
    "2026-07-02T03:00:00Z"
+  ],
+  [
+   "BTC",
+   "2026-07-02T06:15:00Z"
   ],
   [
    "ETH",
@@ -932,6 +952,10 @@
   [
    "ETH",
    "2026-07-02T02:15:00Z"
+  ],
+  [
+   "ETH",
+   "2026-07-02T06:15:00Z"
   ],
   [
    "ETH",
