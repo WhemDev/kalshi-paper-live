@@ -1,31 +1,31 @@
 {
- "updated": "2026-07-02T02:30:01.325881+00:00",
+ "updated": "2026-07-02T02:31:33.290156+00:00",
  "campaign_deadline": "2026-07-02T09:24:41.926379+00:00",
  "mode": "PAPER (auto-entry, real Kalshi ask + real settlement)",
  "strategy": "extreme-tails 10% + model confirm | Kalshi 15m",
  "current": {
   "BTC": {
-   "ticker": "KXBTC15M-26JUL012230-30",
-   "window_end": "2026-07-02T02:30:00Z",
-   "secs_in": 871,
-   "prob_up": 0.5102,
-   "prev_ret": -0.00075,
+   "ticker": "KXBTC15M-26JUL012245-45",
+   "window_end": "2026-07-02T02:45:00Z",
+   "secs_in": 93,
+   "prob_up": 0.4976,
+   "prev_ret": 0.0008,
    "tail_lo": -0.0025,
    "tail_hi": 0.00224,
-   "yes_ask": 0.998,
-   "no_ask": 0.004,
+   "yes_ask": 0.72,
+   "no_ask": 0.29,
    "signal": "WAIT"
   },
   "ETH": {
-   "ticker": "KXETH15M-26JUL012230-30",
-   "window_end": "2026-07-02T02:30:00Z",
-   "secs_in": 871,
-   "prob_up": 0.543,
-   "prev_ret": -0.00092,
+   "ticker": "KXETH15M-26JUL012245-45",
+   "window_end": "2026-07-02T02:45:00Z",
+   "secs_in": 93,
+   "prob_up": 0.5348,
+   "prev_ret": 0.0004,
    "tail_lo": -0.00279,
    "tail_hi": 0.00271,
-   "yes_ask": 0.995,
-   "no_ask": 0.011,
+   "yes_ask": 0.69,
+   "no_ask": 0.33,
    "signal": "WAIT"
   }
  },
@@ -383,11 +383,27 @@
    "no_ask": 0.33,
    "prev_ret": -0.00092,
    "secs_in": 43
+  },
+  {
+   "asset": "BTC",
+   "window_end": "2026-07-02T02:45:00Z",
+   "yes_ask": 0.61,
+   "no_ask": 0.4,
+   "prev_ret": 0.0008,
+   "secs_in": 33
+  },
+  {
+   "asset": "ETH",
+   "window_end": "2026-07-02T02:45:00Z",
+   "yes_ask": 0.46,
+   "no_ask": 0.55,
+   "prev_ret": 0.0004,
+   "secs_in": 33
   }
  ],
  "skips": {
   "price": 2,
-  "no_signal": 30
+  "no_signal": 32
  },
  "pending": {},
  "seen": [
@@ -398,6 +414,10 @@
   [
    "ETH",
    "2026-07-02T02:30:00Z"
+  ],
+  [
+   "ETH",
+   "2026-07-02T02:45:00Z"
   ],
   [
    "BTC",
@@ -458,6 +478,10 @@
   [
    "BTC",
    "2026-07-02T02:30:00Z"
+  ],
+  [
+   "BTC",
+   "2026-07-02T02:45:00Z"
   ],
   [
    "ETH",
