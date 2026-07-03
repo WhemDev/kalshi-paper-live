@@ -234,19 +234,13 @@ def gh_get_json(path):
 def main():
     start = now()
     prev = gh_get_json("state.json") or {}
-    deadline_iso = prev.get("campaign_deadline")
     trades = prev.get("all_trades", [])
-    if deadline_iso:
-        deadline = datetime.fromisoformat(deadline_iso)
-    else:
-        deadline = start.timestamp() + CAMPAIGN_HOURS * 3600
-        deadline = datetime.fromtimestamp(deadline, timezone.utc)
-    if now() >= deadline:
-        log(f"campaign deadline {deadline.isoformat()} passed - exiting")
-        return
-    run_end = min(start.timestamp() + RUN_MINUTES * 60, deadline.timestamp())
+    # INDEFINITE MODE: no campaign deadline. Each run lasts RUN_MINUTES then the
+    # workflow self-chains the next run forever, until stopped manually
+    # (disable the workflow / cancel the run in GitHub Actions).
+    run_end = start.timestamp() + RUN_MINUTES * 60
     log(f"engine start | run until {datetime.fromtimestamp(run_end, timezone.utc):%H:%M:%S} "
-        f"| campaign deadline {deadline:%Y-%m-%d %H:%M:%S}")
+        f"| indefinite campaign (manual stop)")
 
     models = {}
     ret_hist = {}
@@ -278,7 +272,7 @@ def main():
             maxdd = max(maxdd, pk - v)
         state = {
             "updated": now().isoformat(),
-            "campaign_deadline": deadline.isoformat(),
+            "campaign_deadline": None,
             "mode": "PAPER (auto-entry, real Kalshi ask + real settlement)",
             "strategy": f"extreme-tails {int(TAIL_Q*100)}% + model confirm | Kalshi 15m",
             "current": current,

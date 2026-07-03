@@ -113,6 +113,8 @@ function render(s){
   if(s.campaign_deadline){
     const dl=new Date(s.campaign_deadline), ms=dl-Date.now();
     $('deadline').textContent= ms>0 ? `kampanya bitişine ${(ms/3600000).toFixed(1)} saat` : 'kampanya tamamlandı';
+  } else {
+    $('deadline').textContent='sürekli çalışıyor (manuel durdurma)';
   }
   const st=s.stats||{};
   $('kpis').innerHTML=[

@@ -33,18 +33,10 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: python engine.py "${{ github.event.inputs.minutes || '345' }}"
-      - name: chain next run if campaign not over
+      - name: chain next run (indefinite - runs until manually stopped)
         if: always()
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          DL=$(curl -s "https://raw.githubusercontent.com/${{ github.repository }}/state/state.json" | python3 -c "import json,sys;print(json.load(sys.stdin).get('campaign_deadline',''))" || echo "")
-          if [ -n "$DL" ]; then
-            NOW=$(date -u +%s); END=$(date -u -d "$DL" +%s || echo 0)
-            if [ "$NOW" -lt "$END" ]; then
-              echo "campaign still running (until $DL) -> dispatching next run"
-              gh workflow run engine.yml -R "${{ github.repository }}" -f minutes=345 || true
-            else
-              echo "campaign finished"
-            fi
-          fi
+          echo "indefinite campaign -> dispatching next run"
+          gh workflow run engine.yml -R "${{ github.repository }}" -f minutes=345 || true
