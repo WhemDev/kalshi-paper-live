@@ -1,32 +1,32 @@
 {
- "updated": "2026-07-03T15:29:16.645832+00:00",
+ "updated": "2026-07-03T15:30:49.136767+00:00",
  "campaign_deadline": null,
  "mode": "PAPER (auto-entry, real Kalshi ask + real settlement)",
  "strategy": "extreme-tails 10% + model confirm | Kalshi 15m",
  "current": {
   "BTC": {
-   "ticker": "KXBTC15M-26JUL031130-30",
-   "window_end": "2026-07-03T15:30:00Z",
-   "secs_in": 857,
-   "prob_up": 0.5044,
-   "prev_ret": 0.00033,
+   "ticker": "KXBTC15M-26JUL031145-45",
+   "window_end": "2026-07-03T15:45:00Z",
+   "secs_in": 49,
+   "prob_up": 0.5183,
+   "prev_ret": -0.00263,
    "tail_lo": -0.00243,
    "tail_hi": 0.00218,
-   "yes_ask": 0.001,
-   "no_ask": 1.0,
+   "yes_ask": 0.52,
+   "no_ask": 0.49,
    "signal": "WAIT"
   },
   "ETH": {
-   "ticker": "KXETH15M-26JUL031130-30",
-   "window_end": "2026-07-03T15:30:00Z",
-   "secs_in": 857,
-   "prob_up": 0.4927,
-   "prev_ret": 0.00245,
+   "ticker": "KXETH15M-26JUL031145-45",
+   "window_end": "2026-07-03T15:45:00Z",
+   "secs_in": 49,
+   "prob_up": 0.5364,
+   "prev_ret": -0.00414,
    "tail_lo": -0.00272,
    "tail_hi": 0.0027,
-   "yes_ask": 0.001,
-   "no_ask": 1.0,
-   "signal": "WAIT"
+   "yes_ask": 0.57,
+   "no_ask": 0.44,
+   "signal": "ENTER YES @ 0.57"
   }
  },
  "stats": {
@@ -1071,13 +1071,40 @@
    "no_ask": 0.48,
    "prev_ret": 0.00245,
    "secs_in": 58
+  },
+  {
+   "asset": "BTC",
+   "window_end": "2026-07-03T15:45:00Z",
+   "yes_ask": 0.52,
+   "no_ask": 0.5,
+   "prev_ret": -0.00263,
+   "secs_in": 19
+  },
+  {
+   "asset": "ETH",
+   "window_end": "2026-07-03T15:45:00Z",
+   "yes_ask": 0.57,
+   "no_ask": 0.45,
+   "prev_ret": -0.00414,
+   "secs_in": 19
   }
  ],
  "skips": {
-  "price": 4,
-  "no_signal": 97
+  "price": 5,
+  "no_signal": 98
  },
- "pending": {},
+ "pending": {
+  "('ETH', '2026-07-03T15:45:00Z')": {
+   "asset": "ETH",
+   "ticker": "KXETH15M-26JUL031145-45",
+   "close_iso": "2026-07-03T15:45:00Z",
+   "side": "YES",
+   "entry": 0.57,
+   "prob": 0.5364,
+   "prev_ret": -0.00414,
+   "shadow": true
+  }
+ },
  "seen": [
   [
    "BTC",
@@ -1154,6 +1181,10 @@
   [
    "BTC",
    "2026-07-03T11:30:00Z"
+  ],
+  [
+   "BTC",
+   "2026-07-03T15:45:00Z"
   ],
   [
    "BTC",
