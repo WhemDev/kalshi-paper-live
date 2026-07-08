@@ -1,31 +1,31 @@
 {
- "updated": "2026-07-08T18:28:35.121822+00:00",
+ "updated": "2026-07-08T18:30:07.994881+00:00",
  "campaign_deadline": null,
  "mode": "PAPER (auto-entry, real Kalshi ask + real settlement)",
  "strategy": "extreme-tails 10% + model confirm | Kalshi 15m",
  "current": {
   "BTC": {
-   "ticker": "KXBTC15M-26JUL081430-30",
-   "window_end": "2026-07-08T18:30:00Z",
-   "secs_in": 815,
-   "prob_up": 0.5121,
-   "prev_ret": 0.00142,
+   "ticker": "KXBTC15M-26JUL081445-45",
+   "window_end": "2026-07-08T18:45:00Z",
+   "secs_in": 8,
+   "prob_up": 0.5267,
+   "prev_ret": -0.00149,
    "tail_lo": -0.00244,
    "tail_hi": 0.0022,
-   "yes_ask": 0.017,
-   "no_ask": 0.985,
+   "yes_ask": 0.42,
+   "no_ask": 0.59,
    "signal": "WAIT"
   },
   "ETH": {
    "ticker": "KXETH15M-26JUL081430-30",
    "window_end": "2026-07-08T18:30:00Z",
-   "secs_in": 815,
+   "secs_in": 878,
    "prob_up": 0.4679,
    "prev_ret": 0.00377,
    "tail_lo": -0.0029,
-   "tail_hi": 0.00283,
-   "yes_ask": 0.01,
-   "no_ask": 0.994,
+   "tail_hi": 0.00285,
+   "yes_ask": 0.001,
+   "no_ask": 1.0,
    "signal": "signal-but-late"
   }
  },
@@ -500,14 +500,6 @@
   }
  ],
  "openings": [
-  {
-   "asset": "ETH",
-   "window_end": "2026-07-08T03:45:00Z",
-   "yes_ask": 0.49,
-   "no_ask": 0.53,
-   "prev_ret": 0.00096,
-   "secs_in": 20
-  },
   {
    "asset": "BTC",
    "window_end": "2026-07-08T03:45:00Z",
@@ -1459,11 +1451,19 @@
    "no_ask": 0.58,
    "prev_ret": 0.00377,
    "secs_in": 38
+  },
+  {
+   "asset": "BTC",
+   "window_end": "2026-07-08T18:45:00Z",
+   "yes_ask": 0.42,
+   "no_ask": 0.59,
+   "prev_ret": -0.00149,
+   "secs_in": 8
   }
  ],
  "skips": {
   "price": 51,
-  "no_signal": 979
+  "no_signal": 980
  },
  "pending": {
   "('ETH', '2026-07-08T18:30:00Z')": {
@@ -1478,10 +1478,6 @@
   }
  },
  "seen": [
-  [
-   "BTC",
-   "2026-07-06T23:30:00Z"
-  ],
   [
    "ETH",
    "2026-07-07T13:15:00Z"
@@ -2265,6 +2261,10 @@
   [
    "BTC",
    "2026-07-08T07:15:00Z"
+  ],
+  [
+   "BTC",
+   "2026-07-08T18:45:00Z"
   ],
   [
    "ETH",
