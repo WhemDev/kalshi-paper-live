@@ -15,3 +15,5 @@ Bet only when the previous 15m return is in the trailing 10% tails AND a logisti
 Entry = real Kalshi ask captured in the first 2.5 minutes of the window.
 
 This is research tooling; nothing here is financial advice.
+
+Dashboard: https://whemdev.github.io/kalshi-paper-live/
