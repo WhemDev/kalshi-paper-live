@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-12T23:00:19.837045+00:00",
+ "updated": "2026-07-12T23:01:52.996923+00:00",
  "campaign_deadline": null,
  "mode": "PAPER (auto-entry, real Kalshi ask + real settlement)",
  "strategy": "extreme-tails 10% + model confirm | Kalshi 15m",
@@ -7,26 +7,26 @@
   "BTC": {
    "ticker": "KXBTC15M-26JUL121915-15",
    "window_end": "2026-07-12T23:15:00Z",
-   "secs_in": 20,
+   "secs_in": 113,
    "prob_up": 0.4841,
    "prev_ret": 0.00157,
    "tail_lo": -0.00236,
    "tail_hi": 0.00206,
-   "yes_ask": 0.39,
-   "no_ask": 0.62,
+   "yes_ask": 0.4,
+   "no_ask": 0.61,
    "signal": "WAIT"
   },
   "ETH": {
-   "ticker": "KXETH15M-26JUL121900-00",
-   "window_end": "2026-07-12T23:00:00Z",
-   "secs_in": 890,
-   "prob_up": 0.5147,
-   "prev_ret": -0.00078,
+   "ticker": "KXETH15M-26JUL121915-15",
+   "window_end": "2026-07-12T23:15:00Z",
+   "secs_in": 113,
+   "prob_up": 0.4652,
+   "prev_ret": 0.004,
    "tail_lo": -0.00276,
-   "tail_hi": 0.0026,
-   "yes_ask": 1.0,
-   "no_ask": 0.001,
-   "signal": "WAIT"
+   "tail_hi": 0.00261,
+   "yes_ask": 0.45,
+   "no_ask": 0.56,
+   "signal": "ENTER NO @ 0.56"
   }
  },
  "stats": {
@@ -526,14 +526,6 @@
   }
  ],
  "openings": [
-  {
-   "asset": "BTC",
-   "window_end": "2026-07-12T08:15:00Z",
-   "yes_ask": 0.47,
-   "no_ask": 0.54,
-   "prev_ret": 0.0002,
-   "secs_in": 64
-  },
   {
    "asset": "ETH",
    "window_end": "2026-07-12T08:30:00Z",
@@ -1485,13 +1477,32 @@
    "no_ask": 0.62,
    "prev_ret": 0.00157,
    "secs_in": 20
+  },
+  {
+   "asset": "ETH",
+   "window_end": "2026-07-12T23:15:00Z",
+   "yes_ask": 0.38,
+   "no_ask": 0.63,
+   "prev_ret": 0.004,
+   "secs_in": 53
   }
  ],
  "skips": {
-  "price": 68,
+  "price": 69,
   "no_signal": 1724
  },
- "pending": {},
+ "pending": {
+  "('ETH', '2026-07-12T23:15:00Z')": {
+   "asset": "ETH",
+   "ticker": "KXETH15M-26JUL121915-15",
+   "close_iso": "2026-07-12T23:15:00Z",
+   "side": "NO",
+   "entry": 0.63,
+   "prob": 0.4652,
+   "prev_ret": 0.004,
+   "shadow": true
+  }
+ },
  "seen": [
   [
    "ETH",
