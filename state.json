@@ -1,32 +1,32 @@
 {
- "updated": "2026-07-13T00:15:30.689159+00:00",
+ "updated": "2026-07-13T00:17:04.787134+00:00",
  "campaign_deadline": null,
  "mode": "PAPER (auto-entry, real Kalshi ask + real settlement)",
  "strategy": "extreme-tails 10% + model confirm | Kalshi 15m",
  "current": {
   "BTC": {
-   "ticker": "KXBTC15M-26JUL122015-15",
-   "window_end": "2026-07-13T00:15:00Z",
-   "secs_in": 870,
-   "prob_up": 0.5054,
-   "prev_ret": 0.00064,
+   "ticker": "KXBTC15M-26JUL122030-30",
+   "window_end": "2026-07-13T00:30:00Z",
+   "secs_in": 125,
+   "prob_up": 0.4324,
+   "prev_ret": 0.00682,
    "tail_lo": -0.00232,
    "tail_hi": 0.00202,
-   "yes_ask": 1.0,
-   "no_ask": 0.001,
-   "signal": "WAIT"
+   "yes_ask": 0.51,
+   "no_ask": 0.5,
+   "signal": "ENTER NO @ 0.5"
   },
   "ETH": {
    "ticker": "KXETH15M-26JUL122030-30",
    "window_end": "2026-07-13T00:30:00Z",
-   "secs_in": 31,
+   "secs_in": 125,
    "prob_up": 0.3201,
    "prev_ret": 0.01857,
    "tail_lo": -0.00272,
    "tail_hi": 0.00264,
-   "yes_ask": 0.67,
-   "no_ask": 0.34,
-   "signal": "ENTER NO @ 0.34"
+   "yes_ask": 0.37,
+   "no_ask": 0.64,
+   "signal": "ENTER NO @ 0.64"
   }
  },
  "stats": {
@@ -526,14 +526,6 @@
   }
  ],
  "openings": [
-  {
-   "asset": "ETH",
-   "window_end": "2026-07-12T09:30:00Z",
-   "yes_ask": 0.31,
-   "no_ask": 0.7,
-   "prev_ret": 0.0,
-   "secs_in": 44
-  },
   {
    "asset": "BTC",
    "window_end": "2026-07-12T09:45:00Z",
@@ -1485,6 +1477,14 @@
    "no_ask": 0.34,
    "prev_ret": 0.01857,
    "secs_in": 31
+  },
+  {
+   "asset": "BTC",
+   "window_end": "2026-07-13T00:30:00Z",
+   "yes_ask": 0.62,
+   "no_ask": 0.39,
+   "prev_ret": 0.00682,
+   "secs_in": 64
   }
  ],
  "skips": {
@@ -1500,6 +1500,15 @@
    "entry": 0.34,
    "prob": 0.3201,
    "prev_ret": 0.01857
+  },
+  "('BTC', '2026-07-13T00:30:00Z')": {
+   "asset": "BTC",
+   "ticker": "KXBTC15M-26JUL122030-30",
+   "close_iso": "2026-07-13T00:30:00Z",
+   "side": "NO",
+   "entry": 0.39,
+   "prob": 0.4324,
+   "prev_ret": 0.00682
   }
  },
  "seen": [
