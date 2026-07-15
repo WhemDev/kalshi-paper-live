@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-15T13:30:59.463504+00:00",
+ "updated": "2026-07-15T13:31:02.520921+00:00",
  "campaign_deadline": null,
  "mode": "PAPER (auto-entry, real Kalshi ask + real settlement)",
  "strategy": "extreme-tails 10% + model confirm | Kalshi 15m",
@@ -35,9 +35,9 @@
   "winrate": 0.5,
   "total_pnl": 3.8013,
   "avg_pnl": 0.0297,
-  "shadow_bets": 103,
-  "shadow_pnl": 4.5461,
-  "shadow_winrate": 0.6602,
+  "shadow_bets": 104,
+  "shadow_pnl": 4.9293,
+  "shadow_winrate": 0.6635,
   "max_drawdown": 5.0706,
   "equity": [
    -0.5772,
@@ -171,6 +171,19 @@
   ]
  },
  "recent_trades": [
+  {
+   "ts": "2026-07-15T13:31:02.520677+00:00",
+   "asset": "ETH",
+   "ticker": "KXETH15M-26JUL150930-30",
+   "side": "NO (G)",
+   "entry": 0.6,
+   "fee": 0.0168,
+   "prob": 0.4799,
+   "prev_ret": 0.00592,
+   "resolved_up": 0,
+   "pnl": 0.3832,
+   "shadow": true
+  },
   {
    "ts": "2026-07-15T13:30:59.463304+00:00",
    "asset": "BTC",
@@ -546,19 +559,6 @@
    "prev_ret": 0.00995,
    "resolved_up": 0,
    "pnl": 0.4128,
-   "shadow": true
-  },
-  {
-   "ts": "2026-07-14T13:30:58.453613+00:00",
-   "asset": "BTC",
-   "ticker": "KXBTC15M-26JUL140930-30",
-   "side": "YES (G)",
-   "entry": 0.61,
-   "fee": 0.0167,
-   "prob": 0.5302,
-   "prev_ret": -0.00264,
-   "resolved_up": 1,
-   "pnl": 0.3733,
    "shadow": true
   }
  ],
@@ -1528,18 +1528,7 @@
   "price": 105,
   "no_signal": 2151
  },
- "pending": {
-  "('ETH', '2026-07-15T13:30:00Z')": {
-   "asset": "ETH",
-   "ticker": "KXETH15M-26JUL150930-30",
-   "close_iso": "2026-07-15T13:30:00Z",
-   "side": "NO",
-   "entry": 0.6,
-   "prob": 0.4799,
-   "prev_ret": 0.00592,
-   "shadow": true
-  }
- },
+ "pending": {},
  "seen": [
   [
    "BTC",
@@ -5343,6 +5332,19 @@
    "resolved_up": 0,
    "pnl": 0.5126,
    "shadow": false
+  },
+  {
+   "ts": "2026-07-15T13:31:02.520677+00:00",
+   "asset": "ETH",
+   "ticker": "KXETH15M-26JUL150930-30",
+   "side": "NO",
+   "entry": 0.6,
+   "fee": 0.0168,
+   "prob": 0.4799,
+   "prev_ret": 0.00592,
+   "resolved_up": 0,
+   "pnl": 0.3832,
+   "shadow": true
   }
  ]
 }
