@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-15T15:15:33.072192+00:00",
+ "updated": "2026-07-15T15:16:06.273565+00:00",
  "campaign_deadline": null,
  "mode": "PAPER (auto-entry, real Kalshi ask + real settlement)",
  "strategy": "extreme-tails 10% + model confirm | Kalshi 15m",
@@ -7,26 +7,26 @@
   "BTC": {
    "ticker": "KXBTC15M-26JUL151130-30",
    "window_end": "2026-07-15T15:30:00Z",
-   "secs_in": 33,
+   "secs_in": 66,
    "prob_up": 0.4898,
    "prev_ret": 0.0007,
    "tail_lo": -0.00239,
    "tail_hi": 0.0024,
-   "yes_ask": 0.47,
-   "no_ask": 0.54,
+   "yes_ask": 0.29,
+   "no_ask": 0.72,
    "signal": "WAIT"
   },
   "ETH": {
-   "ticker": "KXETH15M-26JUL151115-15",
-   "window_end": "2026-07-15T15:15:00Z",
-   "secs_in": 873,
-   "prob_up": 0.4614,
-   "prev_ret": 0.00388,
+   "ticker": "KXETH15M-26JUL151130-30",
+   "window_end": "2026-07-15T15:30:00Z",
+   "secs_in": 66,
+   "prob_up": 0.5151,
+   "prev_ret": -0.00102,
    "tail_lo": -0.00276,
    "tail_hi": 0.00312,
-   "yes_ask": 0.003,
-   "no_ask": 0.998,
-   "signal": "signal-but-late"
+   "yes_ask": 0.36,
+   "no_ask": 0.65,
+   "signal": "WAIT"
   }
  },
  "stats": {
@@ -35,9 +35,9 @@
   "winrate": 0.5,
   "total_pnl": 3.8013,
   "avg_pnl": 0.0297,
-  "shadow_bets": 106,
-  "shadow_pnl": 5.6563,
-  "shadow_winrate": 0.6698,
+  "shadow_bets": 107,
+  "shadow_pnl": 6.0791,
+  "shadow_winrate": 0.6729,
   "max_drawdown": 5.0706,
   "equity": [
    -0.5772,
@@ -171,6 +171,19 @@
   ]
  },
  "recent_trades": [
+  {
+   "ts": "2026-07-15T15:16:06.273341+00:00",
+   "asset": "ETH",
+   "ticker": "KXETH15M-26JUL151115-15",
+   "side": "NO (G)",
+   "entry": 0.56,
+   "fee": 0.0172,
+   "prob": 0.4614,
+   "prev_ret": 0.00388,
+   "resolved_up": 0,
+   "pnl": 0.4228,
+   "shadow": true
+  },
   {
    "ts": "2026-07-15T14:16:16.350254+00:00",
    "asset": "ETH",
@@ -547,30 +560,9 @@
    "resolved_up": 1,
    "pnl": -0.4774,
    "shadow": false
-  },
-  {
-   "ts": "2026-07-14T14:01:11.708908+00:00",
-   "asset": "ETH",
-   "ticker": "KXETH15M-26JUL141000-00",
-   "side": "YES (G)",
-   "entry": 0.56,
-   "fee": 0.0172,
-   "prob": 0.5577,
-   "prev_ret": -0.00571,
-   "resolved_up": 1,
-   "pnl": 0.4228,
-   "shadow": true
   }
  ],
  "openings": [
-  {
-   "asset": "ETH",
-   "window_end": "2026-07-15T00:30:00Z",
-   "yes_ask": 0.53,
-   "no_ask": 0.49,
-   "prev_ret": -0.00234,
-   "secs_in": 49
-  },
   {
    "asset": "ETH",
    "window_end": "2026-07-15T00:45:00Z",
@@ -1522,29 +1514,22 @@
    "no_ask": 0.54,
    "prev_ret": 0.0007,
    "secs_in": 33
+  },
+  {
+   "asset": "ETH",
+   "window_end": "2026-07-15T15:30:00Z",
+   "yes_ask": 0.36,
+   "no_ask": 0.65,
+   "prev_ret": -0.00102,
+   "secs_in": 66
   }
  ],
  "skips": {
   "price": 108,
-  "no_signal": 2161
+  "no_signal": 2162
  },
- "pending": {
-  "('ETH', '2026-07-15T15:15:00Z')": {
-   "asset": "ETH",
-   "ticker": "KXETH15M-26JUL151115-15",
-   "close_iso": "2026-07-15T15:15:00Z",
-   "side": "NO",
-   "entry": 0.56,
-   "prob": 0.4614,
-   "prev_ret": 0.00388,
-   "shadow": true
-  }
- },
+ "pending": {},
  "seen": [
-  [
-   "BTC",
-   "2026-07-14T12:15:00Z"
-  ],
   [
    "ETH",
    "2026-07-15T08:45:00Z"
@@ -1780,6 +1765,10 @@
   [
    "BTC",
    "2026-07-13T17:30:00Z"
+  ],
+  [
+   "ETH",
+   "2026-07-15T15:15:00Z"
   ],
   [
    "BTC",
@@ -5381,6 +5370,19 @@
    "prev_ret": -0.00399,
    "resolved_up": 1,
    "pnl": 0.3635,
+   "shadow": true
+  },
+  {
+   "ts": "2026-07-15T15:16:06.273341+00:00",
+   "asset": "ETH",
+   "ticker": "KXETH15M-26JUL151115-15",
+   "side": "NO",
+   "entry": 0.56,
+   "fee": 0.0172,
+   "prob": 0.4614,
+   "prev_ret": 0.00388,
+   "resolved_up": 0,
+   "pnl": 0.4228,
    "shadow": true
   }
  ]
