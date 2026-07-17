@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-17T05:46:12.013460+00:00",
+ "updated": "2026-07-17T05:46:14.466274+00:00",
  "campaign_deadline": null,
  "mode": "PAPER (auto-entry, real Kalshi ask + real settlement)",
  "strategy": "extreme-tails 10% + model confirm | Kalshi 15m",
@@ -30,11 +30,11 @@
   }
  },
  "stats": {
-  "bets": 143,
+  "bets": 144,
   "wins": 74,
-  "winrate": 0.5175,
-  "total_pnl": 6.572,
-  "avg_pnl": 0.046,
+  "winrate": 0.5139,
+  "total_pnl": 6.0545,
+  "avg_pnl": 0.042,
   "shadow_bets": 120,
   "shadow_pnl": 7.8865,
   "shadow_winrate": 0.6833,
@@ -182,10 +182,24 @@
    7.0135,
    7.486,
    6.9685,
-   6.572
+   6.572,
+   6.0545
   ]
  },
  "recent_trades": [
+  {
+   "ts": "2026-07-17T05:46:14.466026+00:00",
+   "asset": "ETH",
+   "ticker": "KXETH15M-26JUL170145-45",
+   "side": "YES",
+   "entry": 0.5,
+   "fee": 0.0175,
+   "prob": 0.5833,
+   "prev_ret": -0.00513,
+   "resolved_up": 0,
+   "pnl": -0.5175,
+   "shadow": false
+  },
   {
    "ts": "2026-07-17T05:46:12.013208+00:00",
    "asset": "BTC",
@@ -561,19 +575,6 @@
    "prev_ret": 0.00388,
    "resolved_up": 0,
    "pnl": 0.4228,
-   "shadow": true
-  },
-  {
-   "ts": "2026-07-15T14:16:16.350254+00:00",
-   "asset": "ETH",
-   "ticker": "KXETH15M-26JUL151015-15",
-   "side": "YES (G)",
-   "entry": 0.62,
-   "fee": 0.0165,
-   "prob": 0.5257,
-   "prev_ret": -0.00399,
-   "resolved_up": 1,
-   "pnl": 0.3635,
    "shadow": true
   }
  ],
@@ -1544,15 +1545,6 @@
   "no_signal": 2421
  },
  "pending": {
-  "('ETH', '2026-07-17T05:45:00Z')": {
-   "asset": "ETH",
-   "ticker": "KXETH15M-26JUL170145-45",
-   "close_iso": "2026-07-17T05:45:00Z",
-   "side": "YES",
-   "entry": 0.5,
-   "prob": 0.5833,
-   "prev_ret": -0.00513
-  },
   "('BTC', '2026-07-17T06:00:00Z')": {
    "asset": "BTC",
    "ticker": "KXBTC15M-26JUL170200-00",
@@ -5790,6 +5782,19 @@
    "prev_ret": -0.00285,
    "resolved_up": 0,
    "pnl": -0.3965,
+   "shadow": false
+  },
+  {
+   "ts": "2026-07-17T05:46:14.466026+00:00",
+   "asset": "ETH",
+   "ticker": "KXETH15M-26JUL170145-45",
+   "side": "YES",
+   "entry": 0.5,
+   "fee": 0.0175,
+   "prob": 0.5833,
+   "prev_ret": -0.00513,
+   "resolved_up": 0,
+   "pnl": -0.5175,
    "shadow": false
   }
  ]
