@@ -1,31 +1,31 @@
 {
- "updated": "2026-07-20T12:44:51.678355+00:00",
+ "updated": "2026-07-20T12:46:24.068142+00:00",
  "campaign_deadline": null,
  "mode": "PAPER (auto-entry, real Kalshi ask + real settlement)",
  "strategy": "extreme-tails 10% + model confirm | Kalshi 15m",
  "current": {
   "BTC": {
-   "ticker": "KXBTC15M-26JUL200845-45",
-   "window_end": "2026-07-20T12:45:00Z",
-   "secs_in": 892,
-   "prob_up": 0.5182,
-   "prev_ret": -0.00144,
+   "ticker": "KXBTC15M-26JUL200900-00",
+   "window_end": "2026-07-20T13:00:00Z",
+   "secs_in": 84,
+   "prob_up": 0.518,
+   "prev_ret": -0.0016,
    "tail_lo": -0.00247,
    "tail_hi": 0.00227,
-   "yes_ask": 0.001,
-   "no_ask": 1.0,
+   "yes_ask": 0.66,
+   "no_ask": 0.35,
    "signal": "WAIT"
   },
   "ETH": {
-   "ticker": "KXETH15M-26JUL200845-45",
-   "window_end": "2026-07-20T12:45:00Z",
-   "secs_in": 892,
-   "prob_up": 0.5049,
-   "prev_ret": -0.00056,
+   "ticker": "KXETH15M-26JUL200900-00",
+   "window_end": "2026-07-20T13:00:00Z",
+   "secs_in": 84,
+   "prob_up": 0.5302,
+   "prev_ret": -0.00192,
    "tail_lo": -0.00288,
    "tail_hi": 0.00301,
-   "yes_ask": 0.001,
-   "no_ask": 1.0,
+   "yes_ask": 0.66,
+   "no_ask": 0.35,
    "signal": "WAIT"
   }
  },
@@ -601,22 +601,6 @@
   }
  ],
  "openings": [
-  {
-   "asset": "BTC",
-   "window_end": "2026-07-19T19:30:00Z",
-   "yes_ask": 0.6,
-   "no_ask": 0.41,
-   "prev_ret": 0.00082,
-   "secs_in": 44
-  },
-  {
-   "asset": "ETH",
-   "window_end": "2026-07-19T19:30:00Z",
-   "yes_ask": 0.58,
-   "no_ask": 0.43,
-   "prev_ret": 0.00181,
-   "secs_in": 44
-  },
   {
    "asset": "BTC",
    "window_end": "2026-07-19T19:45:00Z",
@@ -1560,11 +1544,27 @@
    "no_ask": 0.39,
    "prev_ret": -0.00056,
    "secs_in": 58
+  },
+  {
+   "asset": "BTC",
+   "window_end": "2026-07-20T13:00:00Z",
+   "yes_ask": 0.38,
+   "no_ask": 0.64,
+   "prev_ret": -0.0016,
+   "secs_in": 24
+  },
+  {
+   "asset": "ETH",
+   "window_end": "2026-07-20T13:00:00Z",
+   "yes_ask": 0.51,
+   "no_ask": 0.5,
+   "prev_ret": -0.00192,
+   "secs_in": 54
   }
  ],
  "skips": {
   "price": 137,
-  "no_signal": 2995
+  "no_signal": 2997
  },
  "pending": {},
  "seen": [
