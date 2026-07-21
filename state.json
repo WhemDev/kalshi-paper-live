@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-21T14:30:21.404183+00:00",
+ "updated": "2026-07-21T14:31:54.896328+00:00",
  "campaign_deadline": null,
  "mode": "PAPER (auto-entry, real Kalshi ask + real settlement)",
  "strategy": "extreme-tails 10% + model confirm | Kalshi 15m",
@@ -7,26 +7,26 @@
   "BTC": {
    "ticker": "KXBTC15M-26JUL211045-45",
    "window_end": "2026-07-21T14:45:00Z",
-   "secs_in": 21,
+   "secs_in": 115,
    "prob_up": 0.5304,
    "prev_ret": -0.0034,
-   "tail_lo": -0.00247,
+   "tail_lo": -0.00248,
    "tail_hi": 0.00246,
-   "yes_ask": 0.66,
-   "no_ask": 0.36,
-   "signal": "ENTER YES @ 0.66"
+   "yes_ask": 0.59,
+   "no_ask": 0.42,
+   "signal": "ENTER YES @ 0.59"
   },
   "ETH": {
-   "ticker": "KXETH15M-26JUL211030-30",
-   "window_end": "2026-07-21T14:30:00Z",
-   "secs_in": 891,
-   "prob_up": 0.5284,
-   "prev_ret": 0.00102,
-   "tail_lo": -0.00291,
+   "ticker": "KXETH15M-26JUL211045-45",
+   "window_end": "2026-07-21T14:45:00Z",
+   "secs_in": 115,
+   "prob_up": 0.5664,
+   "prev_ret": -0.00713,
+   "tail_lo": -0.00293,
    "tail_hi": 0.0029,
-   "yes_ask": 0.001,
-   "no_ask": 1.0,
-   "signal": "WAIT"
+   "yes_ask": 0.54,
+   "no_ask": 0.47,
+   "signal": "ENTER YES @ 0.54"
   }
  },
  "stats": {
@@ -616,14 +616,6 @@
   }
  ],
  "openings": [
-  {
-   "asset": "ETH",
-   "window_end": "2026-07-20T23:45:00Z",
-   "yes_ask": 0.61,
-   "no_ask": 0.4,
-   "prev_ret": 0.00168,
-   "secs_in": 39
-  },
   {
    "asset": "BTC",
    "window_end": "2026-07-21T00:00:00Z",
@@ -1575,10 +1567,18 @@
    "no_ask": 0.36,
    "prev_ret": -0.0034,
    "secs_in": 21
+  },
+  {
+   "asset": "ETH",
+   "window_end": "2026-07-21T14:45:00Z",
+   "yes_ask": 0.57,
+   "no_ask": 0.44,
+   "prev_ret": -0.00713,
+   "secs_in": 55
   }
  ],
  "skips": {
-  "price": 146,
+  "price": 147,
   "no_signal": 3178
  },
  "pending": {
@@ -1590,6 +1590,16 @@
    "entry": 0.66,
    "prob": 0.5304,
    "prev_ret": -0.0034,
+   "shadow": true
+  },
+  "('ETH', '2026-07-21T14:45:00Z')": {
+   "asset": "ETH",
+   "ticker": "KXETH15M-26JUL211045-45",
+   "close_iso": "2026-07-21T14:45:00Z",
+   "side": "YES",
+   "entry": 0.57,
+   "prob": 0.5664,
+   "prev_ret": -0.00713,
    "shadow": true
   }
  },
