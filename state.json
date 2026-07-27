@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-27T23:45:31.289132+00:00",
+ "updated": "2026-07-27T23:47:04.418762+00:00",
  "campaign_deadline": null,
  "mode": "PAPER (auto-entry, real Kalshi ask + real settlement)",
  "strategy": "extreme-tails 10% + model confirm | Kalshi 15m",
@@ -7,26 +7,26 @@
   "BTC": {
    "ticker": "KXBTC15M-26JUL272000-00",
    "window_end": "2026-07-28T00:00:00Z",
-   "secs_in": 31,
+   "secs_in": 124,
    "prob_up": 0.5098,
    "prev_ret": -0.00286,
    "tail_lo": -0.00213,
-   "tail_hi": 0.002,
-   "yes_ask": 0.53,
-   "no_ask": 0.49,
+   "tail_hi": 0.00199,
+   "yes_ask": 0.62,
+   "no_ask": 0.39,
    "signal": "WAIT"
   },
   "ETH": {
-   "ticker": "KXETH15M-26JUL271945-45",
-   "window_end": "2026-07-27T23:45:00Z",
-   "secs_in": 871,
-   "prob_up": 0.475,
-   "prev_ret": 0.00202,
-   "tail_lo": -0.00247,
+   "ticker": "KXETH15M-26JUL272000-00",
+   "window_end": "2026-07-28T00:00:00Z",
+   "secs_in": 124,
+   "prob_up": 0.529,
+   "prev_ret": -0.00307,
+   "tail_lo": -0.00249,
    "tail_hi": 0.00264,
-   "yes_ask": 0.001,
-   "no_ask": 1.0,
-   "signal": "WAIT"
+   "yes_ask": 0.66,
+   "no_ask": 0.35,
+   "signal": "ENTER YES @ 0.66"
   }
  },
  "stats": {
@@ -659,14 +659,6 @@
   }
  ],
  "openings": [
-  {
-   "asset": "ETH",
-   "window_end": "2026-07-27T09:00:00Z",
-   "yes_ask": 0.54,
-   "no_ask": 0.47,
-   "prev_ret": 0.00026,
-   "secs_in": 48
-  },
   {
    "asset": "BTC",
    "window_end": "2026-07-27T09:15:00Z",
@@ -1618,13 +1610,32 @@
    "no_ask": 0.49,
    "prev_ret": -0.00286,
    "secs_in": 31
+  },
+  {
+   "asset": "ETH",
+   "window_end": "2026-07-28T00:00:00Z",
+   "yes_ask": 0.63,
+   "no_ask": 0.39,
+   "prev_ret": -0.00307,
+   "secs_in": 64
   }
  ],
  "skips": {
-  "price": 186,
+  "price": 187,
   "no_signal": 4288
  },
- "pending": {},
+ "pending": {
+  "('ETH', '2026-07-28T00:00:00Z')": {
+   "asset": "ETH",
+   "ticker": "KXETH15M-26JUL272000-00",
+   "close_iso": "2026-07-28T00:00:00Z",
+   "side": "YES",
+   "entry": 0.63,
+   "prob": 0.529,
+   "prev_ret": -0.00307,
+   "shadow": true
+  }
+ },
  "seen": [
   [
    "BTC",
