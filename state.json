@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-29T19:00:54.381348+00:00",
+ "updated": "2026-07-29T19:00:57.567944+00:00",
  "campaign_deadline": null,
  "mode": "PAPER (auto-entry, real Kalshi ask + real settlement)",
  "strategy": "extreme-tails 10% + model confirm | Kalshi 15m",
@@ -35,9 +35,9 @@
   "winrate": 0.4567,
   "total_pnl": -3.1761,
   "avg_pnl": -0.0125,
-  "shadow_bets": 202,
-  "shadow_pnl": 14.3513,
-  "shadow_winrate": 0.6881,
+  "shadow_bets": 203,
+  "shadow_pnl": 14.7345,
+  "shadow_winrate": 0.6897,
   "max_drawdown": 10.6621,
   "equity": [
    -0.5772,
@@ -297,6 +297,19 @@
   ]
  },
  "recent_trades": [
+  {
+   "ts": "2026-07-29T19:00:57.567583+00:00",
+   "asset": "ETH",
+   "ticker": "KXETH15M-26JUL291500-00",
+   "side": "NO (G)",
+   "entry": 0.6,
+   "fee": 0.0168,
+   "prob": 0.4108,
+   "prev_ret": 0.00606,
+   "resolved_up": 0,
+   "pnl": 0.3832,
+   "shadow": true
+  },
   {
    "ts": "2026-07-29T19:00:54.380972+00:00",
    "asset": "BTC",
@@ -673,19 +686,6 @@
    "resolved_up": 1,
    "pnl": -0.5673,
    "shadow": true
-  },
-  {
-   "ts": "2026-07-28T18:01:13.167163+00:00",
-   "asset": "ETH",
-   "ticker": "KXETH15M-26JUL281400-00",
-   "side": "YES",
-   "entry": 0.52,
-   "fee": 0.0175,
-   "prob": 0.5248,
-   "prev_ret": -0.00541,
-   "resolved_up": 1,
-   "pnl": 0.4625,
-   "shadow": false
   }
  ],
  "openings": [
@@ -1654,23 +1654,8 @@
   "price": 204,
   "no_signal": 4587
  },
- "pending": {
-  "('ETH', '2026-07-29T19:00:00Z')": {
-   "asset": "ETH",
-   "ticker": "KXETH15M-26JUL291500-00",
-   "close_iso": "2026-07-29T19:00:00Z",
-   "side": "NO",
-   "entry": 0.6,
-   "prob": 0.4108,
-   "prev_ret": 0.00606,
-   "shadow": true
-  }
- },
+ "pending": {},
  "seen": [
-  [
-   "BTC",
-   "2026-07-29T09:30:00Z"
-  ],
   [
    "ETH",
    "2026-07-29T16:45:00Z"
@@ -1850,6 +1835,10 @@
   [
    "ETH",
    "2026-07-28T21:30:00Z"
+  ],
+  [
+   "ETH",
+   "2026-07-29T19:00:00Z"
   ],
   [
    "BTC",
@@ -8394,6 +8383,19 @@
    "resolved_up": 1,
    "pnl": -0.5474,
    "shadow": false
+  },
+  {
+   "ts": "2026-07-29T19:00:57.567583+00:00",
+   "asset": "ETH",
+   "ticker": "KXETH15M-26JUL291500-00",
+   "side": "NO",
+   "entry": 0.6,
+   "fee": 0.0168,
+   "prob": 0.4108,
+   "prev_ret": 0.00606,
+   "resolved_up": 0,
+   "pnl": 0.3832,
+   "shadow": true
   }
  ]
 }
