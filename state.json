@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-04T01:00:33.105011+00:00",
+ "updated": "2026-08-04T01:02:05.786800+00:00",
  "campaign_deadline": null,
  "mode": "PAPER (auto-entry, real Kalshi ask + real settlement)",
  "strategy": "extreme-tails 10% + model confirm | Kalshi 15m",
@@ -7,26 +7,26 @@
   "BTC": {
    "ticker": "KXBTC15M-26AUG032115-15",
    "window_end": "2026-08-04T01:15:00Z",
-   "secs_in": 33,
+   "secs_in": 126,
    "prob_up": 0.4951,
    "prev_ret": -0.00067,
    "tail_lo": -0.00185,
    "tail_hi": 0.00175,
-   "yes_ask": 0.57,
-   "no_ask": 0.44,
+   "yes_ask": 0.77,
+   "no_ask": 0.24,
    "signal": "WAIT"
   },
   "ETH": {
-   "ticker": "KXETH15M-26AUG032100-00",
-   "window_end": "2026-08-04T01:00:00Z",
-   "secs_in": 873,
-   "prob_up": 0.5279,
-   "prev_ret": -0.00183,
+   "ticker": "KXETH15M-26AUG032115-15",
+   "window_end": "2026-08-04T01:15:00Z",
+   "secs_in": 126,
+   "prob_up": 0.5351,
+   "prev_ret": -0.00323,
    "tail_lo": -0.00217,
    "tail_hi": 0.00224,
-   "yes_ask": 0.006,
-   "no_ask": 0.998,
-   "signal": "WAIT"
+   "yes_ask": 0.79,
+   "no_ask": 0.22,
+   "signal": "ENTER YES @ 0.79"
   }
  },
  "stats": {
@@ -732,14 +732,6 @@
   }
  ],
  "openings": [
-  {
-   "asset": "ETH",
-   "window_end": "2026-08-03T10:15:00Z",
-   "yes_ask": 0.49,
-   "no_ask": 0.52,
-   "prev_ret": 0.00319,
-   "secs_in": 30
-  },
   {
    "asset": "BTC",
    "window_end": "2026-08-03T10:30:00Z",
@@ -1691,13 +1683,32 @@
    "no_ask": 0.44,
    "prev_ret": -0.00067,
    "secs_in": 33
+  },
+  {
+   "asset": "ETH",
+   "window_end": "2026-08-04T01:15:00Z",
+   "yes_ask": 0.58,
+   "no_ask": 0.43,
+   "prev_ret": -0.00323,
+   "secs_in": 65
   }
  ],
  "skips": {
-  "price": 241,
+  "price": 242,
   "no_signal": 5496
  },
- "pending": {},
+ "pending": {
+  "('ETH', '2026-08-04T01:15:00Z')": {
+   "asset": "ETH",
+   "ticker": "KXETH15M-26AUG032115-15",
+   "close_iso": "2026-08-04T01:15:00Z",
+   "side": "YES",
+   "entry": 0.58,
+   "prob": 0.5351,
+   "prev_ret": -0.00323,
+   "shadow": true
+  }
+ },
  "seen": [
   [
    "BTC",
