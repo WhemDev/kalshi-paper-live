@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-10T13:45:38.672473+00:00",
+ "updated": "2026-08-10T13:47:13.528229+00:00",
  "campaign_deadline": null,
  "mode": "PAPER (auto-entry, real Kalshi ask + real settlement)",
  "strategy": "extreme-tails 10% + model confirm | Kalshi 15m",
@@ -7,26 +7,26 @@
   "BTC": {
    "ticker": "KXBTC15M-26AUG101000-00",
    "window_end": "2026-08-10T14:00:00Z",
-   "secs_in": 39,
+   "secs_in": 133,
    "prob_up": 0.5373,
    "prev_ret": -0.0033,
    "tail_lo": -0.00182,
    "tail_hi": 0.00163,
-   "yes_ask": 0.51,
-   "no_ask": 0.5,
-   "signal": "ENTER YES @ 0.51"
+   "yes_ask": 0.44,
+   "no_ask": 0.57,
+   "signal": "ENTER YES @ 0.44"
   },
   "ETH": {
-   "ticker": "KXETH15M-26AUG100945-45",
-   "window_end": "2026-08-10T13:45:00Z",
-   "secs_in": 878,
-   "prob_up": 0.5341,
-   "prev_ret": -0.00041,
-   "tail_lo": -0.00216,
+   "ticker": "KXETH15M-26AUG101000-00",
+   "window_end": "2026-08-10T14:00:00Z",
+   "secs_in": 133,
+   "prob_up": 0.5472,
+   "prev_ret": -0.00314,
+   "tail_lo": -0.00217,
    "tail_hi": 0.00206,
-   "yes_ask": 0.001,
-   "no_ask": 1.0,
-   "signal": "WAIT"
+   "yes_ask": 0.4,
+   "no_ask": 0.61,
+   "signal": "ENTER YES @ 0.4"
   }
  },
  "stats": {
@@ -784,14 +784,6 @@
   }
  ],
  "openings": [
-  {
-   "asset": "BTC",
-   "window_end": "2026-08-09T23:00:00Z",
-   "yes_ask": 0.42,
-   "no_ask": 0.59,
-   "prev_ret": -0.00367,
-   "secs_in": 59
-  },
   {
    "asset": "BTC",
    "window_end": "2026-08-09T23:15:00Z",
@@ -1743,6 +1735,14 @@
    "no_ask": 0.5,
    "prev_ret": -0.0033,
    "secs_in": 8
+  },
+  {
+   "asset": "ETH",
+   "window_end": "2026-08-10T14:00:00Z",
+   "yes_ask": 0.48,
+   "no_ask": 0.53,
+   "prev_ret": -0.00314,
+   "secs_in": 73
   }
  ],
  "skips": {
@@ -1758,6 +1758,15 @@
    "entry": 0.51,
    "prob": 0.5373,
    "prev_ret": -0.0033
+  },
+  "('ETH', '2026-08-10T14:00:00Z')": {
+   "asset": "ETH",
+   "ticker": "KXETH15M-26AUG101000-00",
+   "close_iso": "2026-08-10T14:00:00Z",
+   "side": "YES",
+   "entry": 0.48,
+   "prob": 0.5472,
+   "prev_ret": -0.00314
   }
  },
  "seen": [
