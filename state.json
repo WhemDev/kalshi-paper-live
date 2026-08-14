@@ -1,31 +1,31 @@
 {
- "updated": "2026-08-14T08:43:43.325488+00:00",
+ "updated": "2026-08-14T08:45:15.822533+00:00",
  "campaign_deadline": null,
  "mode": "PAPER (auto-entry, real Kalshi ask + real settlement)",
  "strategy": "extreme-tails 10% + model confirm | Kalshi 15m",
  "current": {
   "BTC": {
-   "ticker": "KXBTC15M-26AUG140445-45",
-   "window_end": "2026-08-14T08:45:00Z",
-   "secs_in": 823,
-   "prob_up": 0.5318,
-   "prev_ret": -0.00246,
+   "ticker": "KXBTC15M-26AUG140500-00",
+   "window_end": "2026-08-14T09:00:00Z",
+   "secs_in": 16,
+   "prob_up": 0.4819,
+   "prev_ret": 0.00245,
    "tail_lo": -0.00181,
    "tail_hi": 0.0016,
-   "yes_ask": 0.975,
-   "no_ask": 0.026,
-   "signal": "signal-but-late"
+   "yes_ask": 0.49,
+   "no_ask": 0.52,
+   "signal": "WAIT"
   },
   "ETH": {
    "ticker": "KXETH15M-26AUG140445-45",
    "window_end": "2026-08-14T08:45:00Z",
-   "secs_in": 823,
+   "secs_in": 886,
    "prob_up": 0.5526,
    "prev_ret": -0.00069,
    "tail_lo": -0.002,
    "tail_hi": 0.00205,
-   "yes_ask": 0.991,
-   "no_ask": 0.01,
+   "yes_ask": 0.997,
+   "no_ask": 0.009,
    "signal": "WAIT"
   }
  },
@@ -816,14 +816,6 @@
   }
  ],
  "openings": [
-  {
-   "asset": "BTC",
-   "window_end": "2026-08-13T18:00:00Z",
-   "yes_ask": 0.61,
-   "no_ask": 0.4,
-   "prev_ret": 0.00042,
-   "secs_in": 49
-  },
   {
    "asset": "ETH",
    "window_end": "2026-08-13T18:00:00Z",
@@ -1775,11 +1767,19 @@
    "no_ask": 0.39,
    "prev_ret": -0.00069,
    "secs_in": 52
+  },
+  {
+   "asset": "BTC",
+   "window_end": "2026-08-14T09:00:00Z",
+   "yes_ask": 0.49,
+   "no_ask": 0.52,
+   "prev_ret": 0.00245,
+   "secs_in": 16
   }
  ],
  "skips": {
   "price": 291,
-  "no_signal": 7244
+  "no_signal": 7245
  },
  "pending": {
   "('BTC', '2026-08-14T08:45:00Z')": {
@@ -1794,10 +1794,6 @@
   }
  },
  "seen": [
-  [
-   "BTC",
-   "2026-08-14T07:45:00Z"
-  ],
   [
    "BTC",
    "2026-08-12T01:45:00Z"
@@ -1973,6 +1969,10 @@
   [
    "BTC",
    "2026-08-13T09:45:00Z"
+  ],
+  [
+   "BTC",
+   "2026-08-14T09:00:00Z"
   ],
   [
    "BTC",
