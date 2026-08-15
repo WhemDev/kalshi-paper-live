@@ -1,31 +1,31 @@
 {
- "updated": "2026-08-15T06:29:57.438323+00:00",
+ "updated": "2026-08-15T06:31:30.256262+00:00",
  "campaign_deadline": null,
  "mode": "PAPER (auto-entry, real Kalshi ask + real settlement)",
  "strategy": "extreme-tails 10% + model confirm | Kalshi 15m",
  "current": {
   "BTC": {
-   "ticker": "KXBTC15M-26AUG150230-30",
-   "window_end": "2026-08-15T06:30:00Z",
-   "secs_in": 897,
-   "prob_up": 0.5247,
-   "prev_ret": -0.00075,
+   "ticker": "KXBTC15M-26AUG150245-45",
+   "window_end": "2026-08-15T06:45:00Z",
+   "secs_in": 90,
+   "prob_up": 0.5124,
+   "prev_ret": 0.0003,
    "tail_lo": -0.00168,
    "tail_hi": 0.0016,
-   "yes_ask": 0.004,
-   "no_ask": 0.997,
+   "yes_ask": 0.63,
+   "no_ask": 0.39,
    "signal": "WAIT"
   },
   "ETH": {
-   "ticker": "KXETH15M-26AUG150230-30",
-   "window_end": "2026-08-15T06:30:00Z",
-   "secs_in": 897,
-   "prob_up": 0.5609,
-   "prev_ret": -0.00015,
+   "ticker": "KXETH15M-26AUG150245-45",
+   "window_end": "2026-08-15T06:45:00Z",
+   "secs_in": 90,
+   "prob_up": 0.5519,
+   "prev_ret": -0.00033,
    "tail_lo": -0.002,
    "tail_hi": 0.00206,
-   "yes_ask": 0.88,
-   "no_ask": 0.15,
+   "yes_ask": 0.7,
+   "no_ask": 0.31,
    "signal": "WAIT"
   }
  },
@@ -819,22 +819,6 @@
   }
  ],
  "openings": [
-  {
-   "asset": "BTC",
-   "window_end": "2026-08-14T15:45:00Z",
-   "yes_ask": 0.67,
-   "no_ask": 0.34,
-   "prev_ret": 0.00092,
-   "secs_in": 52
-  },
-  {
-   "asset": "ETH",
-   "window_end": "2026-08-14T15:45:00Z",
-   "yes_ask": 0.68,
-   "no_ask": 0.33,
-   "prev_ret": 0.0044,
-   "secs_in": 52
-  },
   {
    "asset": "BTC",
    "window_end": "2026-08-14T16:00:00Z",
@@ -1778,18 +1762,30 @@
    "no_ask": 0.45,
    "prev_ret": -0.00015,
    "secs_in": 31
+  },
+  {
+   "asset": "BTC",
+   "window_end": "2026-08-15T06:45:00Z",
+   "yes_ask": 0.67,
+   "no_ask": 0.34,
+   "prev_ret": 0.0003,
+   "secs_in": 30
+  },
+  {
+   "asset": "ETH",
+   "window_end": "2026-08-15T06:45:00Z",
+   "yes_ask": 0.72,
+   "no_ask": 0.29,
+   "prev_ret": -0.00033,
+   "secs_in": 60
   }
  ],
  "skips": {
   "price": 293,
-  "no_signal": 7413
+  "no_signal": 7415
  },
  "pending": {},
  "seen": [
-  [
-   "ETH",
-   "2026-08-13T16:45:00Z"
-  ],
   [
    "BTC",
    "2026-08-13T06:00:00Z"
@@ -1957,6 +1953,10 @@
   [
    "BTC",
    "2026-08-14T15:45:00Z"
+  ],
+  [
+   "ETH",
+   "2026-08-15T06:45:00Z"
   ],
   [
    "BTC",
