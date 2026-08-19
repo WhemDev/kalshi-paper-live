@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-19T15:28:48.046276+00:00",
+ "updated": "2026-08-19T15:30:21.591483+00:00",
  "campaign_deadline": null,
  "mode": "PAPER (auto-entry, real Kalshi ask + real settlement)",
  "strategy": "extreme-tails 10% + model confirm | Kalshi 15m",
@@ -7,26 +7,26 @@
   "BTC": {
    "ticker": "KXBTC15M-26AUG191130-30",
    "window_end": "2026-08-19T15:30:00Z",
-   "secs_in": 828,
+   "secs_in": 891,
    "prob_up": 0.394,
    "prev_ret": 0.01078,
    "tail_lo": -0.00149,
    "tail_hi": 0.0017,
-   "yes_ask": 0.999,
-   "no_ask": 0.002,
-   "signal": "signal-but-late"
-  },
-  "ETH": {
-   "ticker": "KXETH15M-26AUG191130-30",
-   "window_end": "2026-08-19T15:30:00Z",
-   "secs_in": 828,
-   "prob_up": 0.3539,
-   "prev_ret": 0.02086,
-   "tail_lo": -0.00186,
-   "tail_hi": 0.0022,
    "yes_ask": 1.0,
    "no_ask": 0.001,
    "signal": "signal-but-late"
+  },
+  "ETH": {
+   "ticker": "KXETH15M-26AUG191145-45",
+   "window_end": "2026-08-19T15:45:00Z",
+   "secs_in": 22,
+   "prob_up": 0.2767,
+   "prev_ret": 0.02905,
+   "tail_lo": -0.00186,
+   "tail_hi": 0.00222,
+   "yes_ask": 0.49,
+   "no_ask": 0.52,
+   "signal": "ENTER NO @ 0.52"
   }
  },
  "stats": {
@@ -834,14 +834,6 @@
   }
  ],
  "openings": [
-  {
-   "asset": "BTC",
-   "window_end": "2026-08-19T00:45:00Z",
-   "yes_ask": 0.54,
-   "no_ask": 0.47,
-   "prev_ret": 0.00024,
-   "secs_in": 40
-  },
   {
    "asset": "ETH",
    "window_end": "2026-08-19T00:45:00Z",
@@ -1793,6 +1785,14 @@
    "no_ask": 0.59,
    "prev_ret": 0.02086,
    "secs_in": 43
+  },
+  {
+   "asset": "ETH",
+   "window_end": "2026-08-19T15:45:00Z",
+   "yes_ask": 0.49,
+   "no_ask": 0.52,
+   "prev_ret": 0.02905,
+   "secs_in": 22
   }
  ],
  "skips": {
@@ -1818,6 +1818,15 @@
    "prob": 0.3539,
    "prev_ret": 0.02086,
    "shadow": true
+  },
+  "('ETH', '2026-08-19T15:45:00Z')": {
+   "asset": "ETH",
+   "ticker": "KXETH15M-26AUG191145-45",
+   "close_iso": "2026-08-19T15:45:00Z",
+   "side": "NO",
+   "entry": 0.52,
+   "prob": 0.2767,
+   "prev_ret": 0.02905
   }
  },
  "seen": [
