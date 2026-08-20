@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-20T18:15:24.563036+00:00",
+ "updated": "2026-08-20T18:16:57.534326+00:00",
  "campaign_deadline": null,
  "mode": "PAPER (auto-entry, real Kalshi ask + real settlement)",
  "strategy": "extreme-tails 10% + model confirm | Kalshi 15m",
@@ -7,26 +7,26 @@
   "BTC": {
    "ticker": "KXBTC15M-26AUG201430-30",
    "window_end": "2026-08-20T18:30:00Z",
-   "secs_in": 25,
+   "secs_in": 117,
    "prob_up": 0.5091,
    "prev_ret": -0.00241,
-   "tail_lo": -0.00159,
+   "tail_lo": -0.0016,
    "tail_hi": 0.00174,
-   "yes_ask": 0.54,
-   "no_ask": 0.47,
+   "yes_ask": 0.36,
+   "no_ask": 0.65,
    "signal": "WAIT"
   },
   "ETH": {
-   "ticker": "KXETH15M-26AUG201415-15",
-   "window_end": "2026-08-20T18:15:00Z",
-   "secs_in": 894,
-   "prob_up": 0.4744,
-   "prev_ret": 0.00085,
-   "tail_lo": -0.00192,
+   "ticker": "KXETH15M-26AUG201430-30",
+   "window_end": "2026-08-20T18:30:00Z",
+   "secs_in": 117,
+   "prob_up": 0.5233,
+   "prev_ret": -0.0059,
+   "tail_lo": -0.00193,
    "tail_hi": 0.00219,
-   "yes_ask": 0.001,
-   "no_ask": 1.0,
-   "signal": "WAIT"
+   "yes_ask": 0.28,
+   "no_ask": 0.73,
+   "signal": "ENTER YES @ 0.28"
   }
  },
  "stats": {
@@ -879,14 +879,6 @@
   }
  ],
  "openings": [
-  {
-   "asset": "ETH",
-   "window_end": "2026-08-20T01:15:00Z",
-   "yes_ask": 0.51,
-   "no_ask": 0.5,
-   "prev_ret": -0.00428,
-   "secs_in": 45
-  },
   {
    "asset": "BTC",
    "window_end": "2026-08-20T01:30:00Z",
@@ -1838,13 +1830,32 @@
    "no_ask": 0.47,
    "prev_ret": -0.00241,
    "secs_in": 25
+  },
+  {
+   "asset": "ETH",
+   "window_end": "2026-08-20T18:30:00Z",
+   "yes_ask": 0.55,
+   "no_ask": 0.46,
+   "prev_ret": -0.0059,
+   "secs_in": 57
   }
  ],
  "skips": {
-  "price": 326,
+  "price": 327,
   "no_signal": 8357
  },
- "pending": {},
+ "pending": {
+  "('ETH', '2026-08-20T18:30:00Z')": {
+   "asset": "ETH",
+   "ticker": "KXETH15M-26AUG201430-30",
+   "close_iso": "2026-08-20T18:30:00Z",
+   "side": "YES",
+   "entry": 0.55,
+   "prob": 0.5233,
+   "prev_ret": -0.0059,
+   "shadow": true
+  }
+ },
  "seen": [
   [
    "ETH",
