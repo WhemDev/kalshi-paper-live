@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-21T12:13:41.385757+00:00",
+ "updated": "2026-08-21T12:15:14.641873+00:00",
  "campaign_deadline": null,
  "mode": "PAPER (auto-entry, real Kalshi ask + real settlement)",
  "strategy": "extreme-tails 10% + model confirm | Kalshi 15m",
@@ -7,25 +7,25 @@
   "BTC": {
    "ticker": "KXBTC15M-26AUG210815-15",
    "window_end": "2026-08-21T12:15:00Z",
-   "secs_in": 821,
+   "secs_in": 884,
    "prob_up": 0.5248,
    "prev_ret": -0.00247,
    "tail_lo": -0.00185,
    "tail_hi": 0.00165,
-   "yes_ask": 0.941,
-   "no_ask": 0.06,
+   "yes_ask": 1.0,
+   "no_ask": 0.001,
    "signal": "signal-but-late"
   },
   "ETH": {
-   "ticker": "KXETH15M-26AUG210815-15",
-   "window_end": "2026-08-21T12:15:00Z",
-   "secs_in": 821,
-   "prob_up": 0.5446,
-   "prev_ret": -0.00203,
+   "ticker": "KXETH15M-26AUG210830-30",
+   "window_end": "2026-08-21T12:30:00Z",
+   "secs_in": 15,
+   "prob_up": 0.5156,
+   "prev_ret": 0.00339,
    "tail_lo": -0.00206,
    "tail_hi": 0.00206,
-   "yes_ask": 0.995,
-   "no_ask": 0.007,
+   "yes_ask": 0.43,
+   "no_ask": 0.59,
    "signal": "WAIT"
   }
  },
@@ -898,14 +898,6 @@
   }
  ],
  "openings": [
-  {
-   "asset": "ETH",
-   "window_end": "2026-08-20T21:30:00Z",
-   "yes_ask": 0.54,
-   "no_ask": 0.48,
-   "prev_ret": 0.00167,
-   "secs_in": 22
-  },
   {
    "asset": "BTC",
    "window_end": "2026-08-20T21:30:00Z",
@@ -1857,11 +1849,19 @@
    "no_ask": 0.47,
    "prev_ret": -0.00203,
    "secs_in": 37
+  },
+  {
+   "asset": "ETH",
+   "window_end": "2026-08-21T12:30:00Z",
+   "yes_ask": 0.43,
+   "no_ask": 0.59,
+   "prev_ret": 0.00339,
+   "secs_in": 15
   }
  ],
  "skips": {
   "price": 344,
-  "no_signal": 8463
+  "no_signal": 8464
  },
  "pending": {
   "('BTC', '2026-08-21T12:15:00Z')": {
@@ -1876,10 +1876,6 @@
   }
  },
  "seen": [
-  [
-   "BTC",
-   "2026-08-20T16:45:00Z"
-  ],
   [
    "BTC",
    "2026-08-20T11:15:00Z"
@@ -2567,6 +2563,10 @@
   [
    "BTC",
    "2026-08-20T13:15:00Z"
+  ],
+  [
+   "ETH",
+   "2026-08-21T12:30:00Z"
   ],
   [
    "ETH",
