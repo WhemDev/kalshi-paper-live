@@ -1,18 +1,43 @@
 {
- "updated": "2026-08-23T08:00:37.558871+00:00",
+ "updated": "2026-08-23T08:01:11.340596+00:00",
  "campaign_deadline": null,
  "mode": "PAPER (auto-entry, real Kalshi ask + real settlement)",
  "strategy": "extreme-tails 10% + model confirm | Kalshi 15m",
- "current": {},
+ "current": {
+  "BTC": {
+   "ticker": "KXBTC15M-26AUG230415-15",
+   "window_end": "2026-08-23T08:15:00Z",
+   "secs_in": 71,
+   "prob_up": 0.5244,
+   "prev_ret": -0.0011,
+   "tail_lo": -0.00156,
+   "tail_hi": 0.00164,
+   "yes_ask": 0.62,
+   "no_ask": 0.39,
+   "signal": "WAIT"
+  },
+  "ETH": {
+   "ticker": "KXETH15M-26AUG230415-15",
+   "window_end": "2026-08-23T08:15:00Z",
+   "secs_in": 71,
+   "prob_up": 0.5396,
+   "prev_ret": -0.00112,
+   "tail_lo": -0.00194,
+   "tail_hi": 0.00211,
+   "yes_ask": 0.61,
+   "no_ask": 0.4,
+   "signal": "WAIT"
+  }
+ },
  "stats": {
   "bets": 512,
   "wins": 250,
   "winrate": 0.4883,
   "total_pnl": 10.8397,
   "avg_pnl": 0.0212,
-  "shadow_bets": 370,
-  "shadow_pnl": 15.2683,
-  "shadow_winrate": 0.6568,
+  "shadow_bets": 371,
+  "shadow_pnl": 14.701,
+  "shadow_winrate": 0.655,
   "max_drawdown": 12.5634,
   "equity": [
    -0.5772,
@@ -531,6 +556,19 @@
  },
  "recent_trades": [
   {
+   "ts": "2026-08-23T08:01:11.340017+00:00",
+   "asset": "BTC",
+   "ticker": "KXBTC15M-26AUG230400-00",
+   "side": "YES (G)",
+   "entry": 0.55,
+   "fee": 0.0173,
+   "prob": 0.5221,
+   "prev_ret": -0.00214,
+   "resolved_up": 0,
+   "pnl": -0.5673,
+   "shadow": true
+  },
+  {
    "ts": "2026-08-23T07:30:54.042903+00:00",
    "asset": "BTC",
    "ticker": "KXBTC15M-26AUG230330-30",
@@ -906,38 +944,9 @@
    "resolved_up": 0,
    "pnl": 0.4327,
    "shadow": true
-  },
-  {
-   "ts": "2026-08-22T07:01:15.018585+00:00",
-   "asset": "BTC",
-   "ticker": "KXBTC15M-26AUG220300-00",
-   "side": "NO",
-   "entry": 0.44,
-   "fee": 0.0172,
-   "prob": 0.4757,
-   "prev_ret": 0.00313,
-   "resolved_up": 1,
-   "pnl": -0.4572,
-   "shadow": false
   }
  ],
  "openings": [
-  {
-   "asset": "BTC",
-   "window_end": "2026-08-22T17:15:00Z",
-   "yes_ask": 0.47,
-   "no_ask": 0.54,
-   "prev_ret": -0.00121,
-   "secs_in": 48
-  },
-  {
-   "asset": "ETH",
-   "window_end": "2026-08-22T17:15:00Z",
-   "yes_ask": 0.56,
-   "no_ask": 0.47,
-   "prev_ret": -0.00173,
-   "secs_in": 48
-  },
   {
    "asset": "BTC",
    "window_end": "2026-08-22T17:30:00Z",
@@ -1881,37 +1890,30 @@
    "no_ask": 0.46,
    "prev_ret": -0.00214,
    "secs_in": 46
+  },
+  {
+   "asset": "BTC",
+   "window_end": "2026-08-23T08:15:00Z",
+   "yes_ask": 0.63,
+   "no_ask": 0.38,
+   "prev_ret": -0.0011,
+   "secs_in": 41
+  },
+  {
+   "asset": "ETH",
+   "window_end": "2026-08-23T08:15:00Z",
+   "yes_ask": 0.53,
+   "no_ask": 0.48,
+   "prev_ret": -0.00112,
+   "secs_in": 41
   }
  ],
  "skips": {
   "price": 372,
-  "no_signal": 8736
+  "no_signal": 8738
  },
- "pending": {
-  "('BTC', '2026-08-23T08:00:00Z')": {
-   "asset": "BTC",
-   "ticker": "KXBTC15M-26AUG230400-00",
-   "close_iso": "2026-08-23T08:00:00Z",
-   "side": "YES",
-   "entry": 0.55,
-   "prob": 0.5221,
-   "prev_ret": -0.00214,
-   "shadow": true
-  }
- },
+ "pending": {},
  "seen": [
-  [
-   "ETH",
-   "2026-08-19T23:45:00Z"
-  ],
-  [
-   "ETH",
-   "2026-08-23T05:30:00Z"
-  ],
-  [
-   "BTC",
-   "2026-08-22T21:45:00Z"
-  ],
   [
    "ETH",
    "2026-08-23T04:00:00Z"
@@ -2011,6 +2013,10 @@
   [
    "ETH",
    "2026-08-21T11:30:00Z"
+  ],
+  [
+   "BTC",
+   "2026-08-23T08:00:00Z"
   ],
   [
    "ETH",
@@ -2139,6 +2145,10 @@
   [
    "ETH",
    "2026-08-19T18:00:00Z"
+  ],
+  [
+   "ETH",
+   "2026-08-23T08:15:00Z"
   ],
   [
    "ETH",
@@ -2295,6 +2305,10 @@
   [
    "BTC",
    "2026-08-23T05:45:00Z"
+  ],
+  [
+   "BTC",
+   "2026-08-23T08:15:00Z"
   ],
   [
    "BTC",
@@ -14165,6 +14179,19 @@
    "resolved_up": 0,
    "pnl": 0.4925,
    "shadow": false
+  },
+  {
+   "ts": "2026-08-23T08:01:11.340017+00:00",
+   "asset": "BTC",
+   "ticker": "KXBTC15M-26AUG230400-00",
+   "side": "YES",
+   "entry": 0.55,
+   "fee": 0.0173,
+   "prob": 0.5221,
+   "prev_ret": -0.00214,
+   "resolved_up": 0,
+   "pnl": -0.5673,
+   "shadow": true
   }
  ]
 }
