@@ -1,32 +1,32 @@
 {
- "updated": "2026-08-24T13:45:43.572417+00:00",
+ "updated": "2026-08-24T13:47:17.446902+00:00",
  "campaign_deadline": null,
  "mode": "PAPER (auto-entry, real Kalshi ask + real settlement)",
  "strategy": "extreme-tails 10% + model confirm | Kalshi 15m",
  "current": {
   "BTC": {
-   "ticker": "KXBTC15M-26AUG240945-45",
-   "window_end": "2026-08-24T13:45:00Z",
-   "secs_in": 883,
-   "prob_up": 0.5133,
-   "prev_ret": -0.00204,
+   "ticker": "KXBTC15M-26AUG241000-00",
+   "window_end": "2026-08-24T14:00:00Z",
+   "secs_in": 137,
+   "prob_up": 0.5405,
+   "prev_ret": -0.00843,
    "tail_lo": -0.00162,
-   "tail_hi": 0.00173,
-   "yes_ask": 0.001,
-   "no_ask": 1.0,
-   "signal": "WAIT"
+   "tail_hi": 0.00172,
+   "yes_ask": 0.46,
+   "no_ask": 0.55,
+   "signal": "ENTER YES @ 0.46"
   },
   "ETH": {
    "ticker": "KXETH15M-26AUG241000-00",
    "window_end": "2026-08-24T14:00:00Z",
-   "secs_in": 44,
+   "secs_in": 137,
    "prob_up": 0.5273,
    "prev_ret": -0.00834,
-   "tail_lo": -0.00203,
+   "tail_lo": -0.00204,
    "tail_hi": 0.00214,
-   "yes_ask": 0.47,
-   "no_ask": 0.55,
-   "signal": "ENTER YES @ 0.47"
+   "yes_ask": 0.71,
+   "no_ask": 0.3,
+   "signal": "ENTER YES @ 0.71"
   }
  },
  "stats": {
@@ -983,14 +983,6 @@
  ],
  "openings": [
   {
-   "asset": "ETH",
-   "window_end": "2026-08-23T23:00:00Z",
-   "yes_ask": 0.51,
-   "no_ask": 0.52,
-   "prev_ret": -0.00142,
-   "secs_in": 52
-  },
-  {
    "asset": "BTC",
    "window_end": "2026-08-23T23:15:00Z",
    "yes_ask": 0.5,
@@ -1941,6 +1933,14 @@
    "no_ask": 0.55,
    "prev_ret": -0.00834,
    "secs_in": 44
+  },
+  {
+   "asset": "BTC",
+   "window_end": "2026-08-24T14:00:00Z",
+   "yes_ask": 0.2,
+   "no_ask": 0.81,
+   "prev_ret": -0.00843,
+   "secs_in": 77
   }
  ],
  "skips": {
@@ -1956,6 +1956,15 @@
    "entry": 0.47,
    "prob": 0.5273,
    "prev_ret": -0.00834
+  },
+  "('BTC', '2026-08-24T14:00:00Z')": {
+   "asset": "BTC",
+   "ticker": "KXBTC15M-26AUG241000-00",
+   "close_iso": "2026-08-24T14:00:00Z",
+   "side": "YES",
+   "entry": 0.2,
+   "prob": 0.5405,
+   "prev_ret": -0.00843
   }
  },
  "seen": [
