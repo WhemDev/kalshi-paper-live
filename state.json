@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-27T11:30:34.887683+00:00",
+ "updated": "2026-08-27T11:32:07.396446+00:00",
  "campaign_deadline": null,
  "mode": "PAPER (auto-entry, real Kalshi ask + real settlement)",
  "strategy": "extreme-tails 10% + model confirm | Kalshi 15m",
@@ -7,26 +7,26 @@
   "BTC": {
    "ticker": "KXBTC15M-26AUG270745-45",
    "window_end": "2026-08-27T11:45:00Z",
-   "secs_in": 35,
+   "secs_in": 127,
    "prob_up": 0.5255,
    "prev_ret": -0.00306,
-   "tail_lo": -0.00176,
+   "tail_lo": -0.00178,
    "tail_hi": 0.00164,
-   "yes_ask": 0.49,
-   "no_ask": 0.52,
-   "signal": "ENTER YES @ 0.49"
+   "yes_ask": 0.4,
+   "no_ask": 0.61,
+   "signal": "ENTER YES @ 0.4"
   },
   "ETH": {
-   "ticker": "KXETH15M-26AUG270730-30",
-   "window_end": "2026-08-27T11:30:00Z",
-   "secs_in": 875,
-   "prob_up": 0.5029,
-   "prev_ret": 0.00109,
-   "tail_lo": -0.0023,
+   "ticker": "KXETH15M-26AUG270745-45",
+   "window_end": "2026-08-27T11:45:00Z",
+   "secs_in": 127,
+   "prob_up": 0.5276,
+   "prev_ret": -0.00265,
+   "tail_lo": -0.00231,
    "tail_hi": 0.00211,
-   "yes_ask": 0.002,
-   "no_ask": 0.999,
-   "signal": "WAIT"
+   "yes_ask": 0.48,
+   "no_ask": 0.53,
+   "signal": "ENTER YES @ 0.48"
   }
  },
  "stats": {
@@ -1052,14 +1052,6 @@
  "openings": [
   {
    "asset": "ETH",
-   "window_end": "2026-08-26T18:45:00Z",
-   "yes_ask": 0.58,
-   "no_ask": 0.43,
-   "prev_ret": -0.00193,
-   "secs_in": 54
-  },
-  {
-   "asset": "ETH",
    "window_end": "2026-08-26T19:00:00Z",
    "yes_ask": 0.59,
    "no_ask": 0.42,
@@ -2009,6 +2001,14 @@
    "no_ask": 0.52,
    "prev_ret": -0.00306,
    "secs_in": 35
+  },
+  {
+   "asset": "ETH",
+   "window_end": "2026-08-27T11:45:00Z",
+   "yes_ask": 0.36,
+   "no_ask": 0.65,
+   "prev_ret": -0.00265,
+   "secs_in": 67
   }
  ],
  "skips": {
@@ -2024,6 +2024,15 @@
    "entry": 0.49,
    "prob": 0.5255,
    "prev_ret": -0.00306
+  },
+  "('ETH', '2026-08-27T11:45:00Z')": {
+   "asset": "ETH",
+   "ticker": "KXETH15M-26AUG270745-45",
+   "close_iso": "2026-08-27T11:45:00Z",
+   "side": "YES",
+   "entry": 0.36,
+   "prob": 0.5276,
+   "prev_ret": -0.00265
   }
  },
  "seen": [
