@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-28T14:58:38.402144+00:00",
+ "updated": "2026-08-28T15:00:24.269919+00:00",
  "campaign_deadline": null,
  "mode": "PAPER (auto-entry, real Kalshi ask + real settlement)",
  "strategy": "extreme-tails 10% + model confirm | Kalshi 15m",
@@ -7,26 +7,26 @@
   "BTC": {
    "ticker": "KXBTC15M-26AUG281100-00",
    "window_end": "2026-08-28T15:00:00Z",
-   "secs_in": 818,
+   "secs_in": 894,
    "prob_up": 0.4475,
    "prev_ret": 0.0062,
    "tail_lo": -0.00162,
-   "tail_hi": 0.0017,
-   "yes_ask": 0.943,
-   "no_ask": 0.058,
+   "tail_hi": 0.00171,
+   "yes_ask": 0.999,
+   "no_ask": 0.002,
    "signal": "signal-but-late"
   },
   "ETH": {
-   "ticker": "KXETH15M-26AUG281100-00",
-   "window_end": "2026-08-28T15:00:00Z",
-   "secs_in": 818,
-   "prob_up": 0.4687,
-   "prev_ret": 0.00732,
+   "ticker": "KXETH15M-26AUG281115-15",
+   "window_end": "2026-08-28T15:15:00Z",
+   "secs_in": 24,
+   "prob_up": 0.4915,
+   "prev_ret": 0.00036,
    "tail_lo": -0.00203,
    "tail_hi": 0.00222,
-   "yes_ask": 0.977,
-   "no_ask": 0.028,
-   "signal": "signal-but-late"
+   "yes_ask": 0.54,
+   "no_ask": 0.47,
+   "signal": "WAIT"
   }
  },
  "stats": {
@@ -1073,14 +1073,6 @@
  ],
  "openings": [
   {
-   "asset": "ETH",
-   "window_end": "2026-08-28T00:15:00Z",
-   "yes_ask": 0.63,
-   "no_ask": 0.4,
-   "prev_ret": -0.00027,
-   "secs_in": 67
-  },
-  {
    "asset": "BTC",
    "window_end": "2026-08-28T00:30:00Z",
    "yes_ask": 0.66,
@@ -2031,11 +2023,19 @@
    "no_ask": 0.47,
    "prev_ret": 0.00732,
    "secs_in": 31
+  },
+  {
+   "asset": "ETH",
+   "window_end": "2026-08-28T15:15:00Z",
+   "yes_ask": 0.54,
+   "no_ask": 0.47,
+   "prev_ret": 0.00036,
+   "secs_in": 24
   }
  ],
  "skips": {
   "price": 442,
-  "no_signal": 9540
+  "no_signal": 9541
  },
  "pending": {
   "('BTC', '2026-08-28T15:00:00Z')": {
@@ -2058,10 +2058,6 @@
   }
  },
  "seen": [
-  [
-   "BTC",
-   "2026-08-28T10:15:00Z"
-  ],
   [
    "ETH",
    "2026-08-27T17:30:00Z"
@@ -2617,6 +2613,10 @@
   [
    "BTC",
    "2026-08-28T08:00:00Z"
+  ],
+  [
+   "ETH",
+   "2026-08-28T15:15:00Z"
   ],
   [
    "ETH",
