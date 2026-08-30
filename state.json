@@ -1,32 +1,32 @@
 {
- "updated": "2026-08-30T23:30:37.193452+00:00",
+ "updated": "2026-08-30T23:32:10.448346+00:00",
  "campaign_deadline": null,
  "mode": "PAPER (auto-entry, real Kalshi ask + real settlement)",
  "strategy": "extreme-tails 10% + model confirm | Kalshi 15m",
  "current": {
   "BTC": {
-   "ticker": "KXBTC15M-26AUG301930-30",
-   "window_end": "2026-08-30T23:30:00Z",
-   "secs_in": 877,
-   "prob_up": 0.4849,
-   "prev_ret": 0.00056,
-   "tail_lo": -0.00157,
+   "ticker": "KXBTC15M-26AUG301945-45",
+   "window_end": "2026-08-30T23:45:00Z",
+   "secs_in": 130,
+   "prob_up": 0.5687,
+   "prev_ret": -0.00888,
+   "tail_lo": -0.00158,
    "tail_hi": 0.00161,
-   "yes_ask": 0.001,
-   "no_ask": 1.0,
-   "signal": "WAIT"
+   "yes_ask": 0.68,
+   "no_ask": 0.33,
+   "signal": "ENTER YES @ 0.68"
   },
   "ETH": {
    "ticker": "KXETH15M-26AUG301945-45",
    "window_end": "2026-08-30T23:45:00Z",
-   "secs_in": 37,
+   "secs_in": 130,
    "prob_up": 0.6092,
    "prev_ret": -0.01602,
    "tail_lo": -0.00219,
-   "tail_hi": 0.00211,
-   "yes_ask": 0.5,
-   "no_ask": 0.59,
-   "signal": "ENTER YES @ 0.5"
+   "tail_hi": 0.0021,
+   "yes_ask": 0.6,
+   "no_ask": 0.41,
+   "signal": "ENTER YES @ 0.6"
   }
  },
  "stats": {
@@ -1089,14 +1089,6 @@
  ],
  "openings": [
   {
-   "asset": "ETH",
-   "window_end": "2026-08-30T08:45:00Z",
-   "yes_ask": 0.52,
-   "no_ask": 0.49,
-   "prev_ret": 0.00046,
-   "secs_in": 56
-  },
-  {
    "asset": "BTC",
    "window_end": "2026-08-30T09:00:00Z",
    "yes_ask": 0.44,
@@ -2047,10 +2039,18 @@
    "no_ask": 0.59,
    "prev_ret": -0.01602,
    "secs_in": 37
+  },
+  {
+   "asset": "BTC",
+   "window_end": "2026-08-30T23:45:00Z",
+   "yes_ask": 0.58,
+   "no_ask": 0.43,
+   "prev_ret": -0.00888,
+   "secs_in": 70
   }
  ],
  "skips": {
-  "price": 453,
+  "price": 454,
   "no_signal": 9967
  },
  "pending": {
@@ -2062,6 +2062,16 @@
    "entry": 0.5,
    "prob": 0.6092,
    "prev_ret": -0.01602
+  },
+  "('BTC', '2026-08-30T23:45:00Z')": {
+   "asset": "BTC",
+   "ticker": "KXBTC15M-26AUG301945-45",
+   "close_iso": "2026-08-30T23:45:00Z",
+   "side": "YES",
+   "entry": 0.58,
+   "prob": 0.5687,
+   "prev_ret": -0.00888,
+   "shadow": true
   }
  },
  "seen": [
