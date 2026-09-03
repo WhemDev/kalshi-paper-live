@@ -1,31 +1,31 @@
 {
- "updated": "2026-09-03T16:28:55.383056+00:00",
+ "updated": "2026-09-03T16:30:30.532445+00:00",
  "campaign_deadline": null,
  "mode": "PAPER (auto-entry, real Kalshi ask + real settlement)",
  "strategy": "extreme-tails 10% + model confirm | Kalshi 15m",
  "current": {
   "BTC": {
-   "ticker": "KXBTC15M-26SEP031230-30",
-   "window_end": "2026-09-03T16:30:00Z",
-   "secs_in": 835,
-   "prob_up": 0.5233,
-   "prev_ret": -0.00529,
+   "ticker": "KXBTC15M-26SEP031245-45",
+   "window_end": "2026-09-03T16:45:00Z",
+   "secs_in": 30,
+   "prob_up": 0.5056,
+   "prev_ret": -0.00242,
    "tail_lo": -0.00166,
    "tail_hi": 0.00179,
-   "yes_ask": 0.001,
-   "no_ask": 1.0,
-   "signal": "signal-but-late"
+   "yes_ask": 0.56,
+   "no_ask": 0.45,
+   "signal": "WAIT"
   },
   "ETH": {
    "ticker": "KXETH15M-26SEP031230-30",
    "window_end": "2026-09-03T16:30:00Z",
-   "secs_in": 835,
+   "secs_in": 870,
    "prob_up": 0.5613,
    "prev_ret": -0.00642,
    "tail_lo": -0.00209,
    "tail_hi": 0.00226,
-   "yes_ask": 0.003,
-   "no_ask": 0.998,
+   "yes_ask": 0.001,
+   "no_ask": 1.0,
    "signal": "signal-but-late"
   }
  },
@@ -1148,14 +1148,6 @@
  ],
  "openings": [
   {
-   "asset": "ETH",
-   "window_end": "2026-09-02T23:45:00Z",
-   "yes_ask": 0.57,
-   "no_ask": 0.44,
-   "prev_ret": -0.00132,
-   "secs_in": 36
-  },
-  {
    "asset": "BTC",
    "window_end": "2026-09-02T23:45:00Z",
    "yes_ask": 0.6,
@@ -2106,11 +2098,19 @@
    "no_ask": 0.54,
    "prev_ret": -0.00642,
    "secs_in": 37
+  },
+  {
+   "asset": "BTC",
+   "window_end": "2026-09-03T16:45:00Z",
+   "yes_ask": 0.56,
+   "no_ask": 0.45,
+   "prev_ret": -0.00242,
+   "secs_in": 30
   }
  ],
  "skips": {
   "price": 500,
-  "no_signal": 10529
+  "no_signal": 10530
  },
  "pending": {
   "('BTC', '2026-09-03T16:30:00Z')": {
@@ -2133,10 +2133,6 @@
   }
  },
  "seen": [
-  [
-   "BTC",
-   "2026-09-03T09:15:00Z"
-  ],
   [
    "BTC",
    "2026-09-03T05:00:00Z"
@@ -2556,6 +2552,10 @@
   [
    "BTC",
    "2026-09-03T15:15:00Z"
+  ],
+  [
+   "BTC",
+   "2026-09-03T16:45:00Z"
   ],
   [
    "ETH",
