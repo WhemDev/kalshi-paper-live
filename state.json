@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-03T22:15:16.590501+00:00",
+ "updated": "2026-09-03T22:16:51.074944+00:00",
  "campaign_deadline": null,
  "mode": "PAPER (auto-entry, real Kalshi ask + real settlement)",
  "strategy": "extreme-tails 10% + model confirm | Kalshi 15m",
@@ -7,26 +7,26 @@
   "BTC": {
    "ticker": "KXBTC15M-26SEP031830-30",
    "window_end": "2026-09-03T22:30:00Z",
-   "secs_in": 16,
+   "secs_in": 111,
    "prob_up": 0.5135,
    "prev_ret": -0.00205,
    "tail_lo": -0.00168,
    "tail_hi": 0.00173,
-   "yes_ask": 0.5,
-   "no_ask": 0.51,
+   "yes_ask": 0.58,
+   "no_ask": 0.43,
    "signal": "WAIT"
   },
   "ETH": {
-   "ticker": "KXETH15M-26SEP031815-15",
-   "window_end": "2026-09-03T22:15:00Z",
-   "secs_in": 886,
-   "prob_up": 0.5055,
-   "prev_ret": 0.00131,
-   "tail_lo": -0.00203,
+   "ticker": "KXETH15M-26SEP031830-30",
+   "window_end": "2026-09-03T22:30:00Z",
+   "secs_in": 111,
+   "prob_up": 0.5317,
+   "prev_ret": -0.00327,
+   "tail_lo": -0.00204,
    "tail_hi": 0.00225,
-   "yes_ask": 0.001,
-   "no_ask": 1.0,
-   "signal": "WAIT"
+   "yes_ask": 0.58,
+   "no_ask": 0.43,
+   "signal": "ENTER YES @ 0.58"
   }
  },
  "stats": {
@@ -1158,14 +1158,6 @@
  "openings": [
   {
    "asset": "ETH",
-   "window_end": "2026-09-03T05:30:00Z",
-   "yes_ask": 0.57,
-   "no_ask": 0.44,
-   "prev_ret": -0.00319,
-   "secs_in": 51
-  },
-  {
-   "asset": "ETH",
    "window_end": "2026-09-03T05:45:00Z",
    "yes_ask": 0.46,
    "no_ask": 0.55,
@@ -2115,13 +2107,31 @@
    "no_ask": 0.51,
    "prev_ret": -0.00205,
    "secs_in": 16
+  },
+  {
+   "asset": "ETH",
+   "window_end": "2026-09-03T22:30:00Z",
+   "yes_ask": 0.5,
+   "no_ask": 0.51,
+   "prev_ret": -0.00327,
+   "secs_in": 50
   }
  ],
  "skips": {
   "price": 501,
   "no_signal": 10568
  },
- "pending": {},
+ "pending": {
+  "('ETH', '2026-09-03T22:30:00Z')": {
+   "asset": "ETH",
+   "ticker": "KXETH15M-26SEP031830-30",
+   "close_iso": "2026-09-03T22:30:00Z",
+   "side": "YES",
+   "entry": 0.5,
+   "prob": 0.5317,
+   "prev_ret": -0.00327
+  }
+ },
  "seen": [
   [
    "BTC",
