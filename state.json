@@ -1,9 +1,34 @@
 {
- "updated": "2026-09-03T15:33:37.930577+00:00",
+ "updated": "2026-09-03T15:35:15.457851+00:00",
  "campaign_deadline": null,
  "mode": "PAPER (auto-entry, real Kalshi ask + real settlement)",
  "strategy": "extreme-tails 10% + model confirm | Kalshi 15m",
- "current": {},
+ "current": {
+  "BTC": {
+   "ticker": "KXBTC15M-26SEP031145-45",
+   "window_end": "2026-09-03T15:45:00Z",
+   "secs_in": 315,
+   "prob_up": 0.4743,
+   "prev_ret": 0.00203,
+   "tail_lo": -0.00162,
+   "tail_hi": 0.0017,
+   "yes_ask": 0.74,
+   "no_ask": 0.27,
+   "signal": "signal-but-late"
+  },
+  "ETH": {
+   "ticker": "KXETH15M-26SEP031145-45",
+   "window_end": "2026-09-03T15:45:00Z",
+   "secs_in": 315,
+   "prob_up": 0.499,
+   "prev_ret": 0.00135,
+   "tail_lo": -0.00206,
+   "tail_hi": 0.00221,
+   "yes_ask": 0.78,
+   "no_ask": 0.23,
+   "signal": "WAIT"
+  }
+ },
  "stats": {
   "bets": 711,
   "wins": 344,
