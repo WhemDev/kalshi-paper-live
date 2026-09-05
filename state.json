@@ -1,31 +1,31 @@
 {
- "updated": "2026-09-05T17:30:31.192564+00:00",
+ "updated": "2026-09-05T17:32:06.057040+00:00",
  "campaign_deadline": null,
  "mode": "PAPER (auto-entry, real Kalshi ask + real settlement)",
  "strategy": "extreme-tails 10% + model confirm | Kalshi 15m",
  "current": {
   "BTC": {
-   "ticker": "KXBTC15M-26SEP051330-30",
-   "window_end": "2026-09-05T17:30:00Z",
-   "secs_in": 870,
-   "prob_up": 0.503,
-   "prev_ret": 0.00057,
-   "tail_lo": -0.00153,
+   "ticker": "KXBTC15M-26SEP051345-45",
+   "window_end": "2026-09-05T17:45:00Z",
+   "secs_in": 125,
+   "prob_up": 0.5332,
+   "prev_ret": -0.00188,
+   "tail_lo": -0.00154,
    "tail_hi": 0.00156,
-   "yes_ask": 0.002,
-   "no_ask": 0.999,
-   "signal": "WAIT"
+   "yes_ask": 0.7,
+   "no_ask": 0.31,
+   "signal": "ENTER YES @ 0.7"
   },
   "ETH": {
    "ticker": "KXETH15M-26SEP051345-45",
    "window_end": "2026-09-05T17:45:00Z",
-   "secs_in": 31,
+   "secs_in": 126,
    "prob_up": 0.5378,
    "prev_ret": -0.00064,
-   "tail_lo": -0.00191,
+   "tail_lo": -0.0019,
    "tail_hi": 0.00214,
-   "yes_ask": 0.53,
-   "no_ask": 0.48,
+   "yes_ask": 0.67,
+   "no_ask": 0.34,
    "signal": "WAIT"
   }
  },
@@ -1172,14 +1172,6 @@
  ],
  "openings": [
   {
-   "asset": "ETH",
-   "window_end": "2026-09-05T02:45:00Z",
-   "yes_ask": 0.53,
-   "no_ask": 0.48,
-   "prev_ret": 0.00031,
-   "secs_in": 53
-  },
-  {
    "asset": "BTC",
    "window_end": "2026-09-05T03:00:00Z",
    "yes_ask": 0.42,
@@ -2130,13 +2122,32 @@
    "no_ask": 0.48,
    "prev_ret": -0.00064,
    "secs_in": 31
+  },
+  {
+   "asset": "BTC",
+   "window_end": "2026-09-05T17:45:00Z",
+   "yes_ask": 0.6,
+   "no_ask": 0.41,
+   "prev_ret": -0.00188,
+   "secs_in": 64
   }
  ],
  "skips": {
-  "price": 506,
+  "price": 507,
   "no_signal": 10894
  },
- "pending": {},
+ "pending": {
+  "('BTC', '2026-09-05T17:45:00Z')": {
+   "asset": "BTC",
+   "ticker": "KXBTC15M-26SEP051345-45",
+   "close_iso": "2026-09-05T17:45:00Z",
+   "side": "YES",
+   "entry": 0.6,
+   "prob": 0.5332,
+   "prev_ret": -0.00188,
+   "shadow": true
+  }
+ },
  "seen": [
   [
    "BTC",
