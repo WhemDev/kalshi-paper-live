@@ -1,9 +1,34 @@
 {
- "updated": "2026-09-08T05:00:51.073879+00:00",
+ "updated": "2026-09-08T05:02:26.350422+00:00",
  "campaign_deadline": null,
  "mode": "PAPER (auto-entry, real Kalshi ask + real settlement)",
  "strategy": "extreme-tails 10% + model confirm | Kalshi 15m",
- "current": {},
+ "current": {
+  "BTC": {
+   "ticker": "KXBTC15M-26SEP080115-15",
+   "window_end": "2026-09-08T05:15:00Z",
+   "secs_in": 146,
+   "prob_up": 0.5075,
+   "prev_ret": -0.00125,
+   "tail_lo": -0.00158,
+   "tail_hi": 0.00161,
+   "yes_ask": 0.39,
+   "no_ask": 0.62,
+   "signal": "WAIT"
+  },
+  "ETH": {
+   "ticker": "KXETH15M-26SEP080115-15",
+   "window_end": "2026-09-08T05:15:00Z",
+   "secs_in": 146,
+   "prob_up": 0.5493,
+   "prev_ret": -0.00023,
+   "tail_lo": -0.00198,
+   "tail_hi": 0.00215,
+   "yes_ask": 0.72,
+   "no_ask": 0.29,
+   "signal": "WAIT"
+  }
+ },
  "stats": {
   "bets": 753,
   "wins": 365,
@@ -1165,22 +1190,6 @@
  "openings": [
   {
    "asset": "BTC",
-   "window_end": "2026-09-07T14:15:00Z",
-   "yes_ask": 0.57,
-   "no_ask": 0.44,
-   "prev_ret": -2e-05,
-   "secs_in": 46
-  },
-  {
-   "asset": "ETH",
-   "window_end": "2026-09-07T14:15:00Z",
-   "yes_ask": 0.38,
-   "no_ask": 0.63,
-   "prev_ret": 0.00123,
-   "secs_in": 47
-  },
-  {
-   "asset": "BTC",
    "window_end": "2026-09-07T14:30:00Z",
    "yes_ask": 0.54,
    "no_ask": 0.47,
@@ -2122,22 +2131,30 @@
    "no_ask": 0.46,
    "prev_ret": -0.0,
    "secs_in": 67
+  },
+  {
+   "asset": "BTC",
+   "window_end": "2026-09-08T05:15:00Z",
+   "yes_ask": 0.26,
+   "no_ask": 0.75,
+   "prev_ret": -0.00125,
+   "secs_in": 54
+  },
+  {
+   "asset": "ETH",
+   "window_end": "2026-09-08T05:15:00Z",
+   "yes_ask": 0.41,
+   "no_ask": 0.61,
+   "prev_ret": -0.00023,
+   "secs_in": 54
   }
  ],
  "skips": {
   "price": 523,
-  "no_signal": 11335
+  "no_signal": 11337
  },
  "pending": {},
  "seen": [
-  [
-   "BTC",
-   "2026-09-06T18:45:00Z"
-  ],
-  [
-   "BTC",
-   "2026-09-07T04:30:00Z"
-  ],
   [
    "BTC",
    "2026-09-07T01:15:00Z"
@@ -2257,6 +2274,10 @@
   [
    "ETH",
    "2026-09-06T17:45:00Z"
+  ],
+  [
+   "ETH",
+   "2026-09-08T05:15:00Z"
   ],
   [
    "BTC",
@@ -2549,6 +2570,10 @@
   [
    "ETH",
    "2026-09-07T01:00:00Z"
+  ],
+  [
+   "BTC",
+   "2026-09-08T05:15:00Z"
   ],
   [
    "ETH",
