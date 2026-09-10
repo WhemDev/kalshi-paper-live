@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-10T13:01:11.997352+00:00",
+ "updated": "2026-09-10T13:01:16.709731+00:00",
  "campaign_deadline": null,
  "mode": "PAPER (auto-entry, real Kalshi ask + real settlement)",
  "strategy": "extreme-tails 10% + model confirm | Kalshi 15m",
@@ -30,11 +30,11 @@
   }
  },
  "stats": {
-  "bets": 782,
+  "bets": 783,
   "wins": 376,
-  "winrate": 0.4808,
-  "total_pnl": 6.9661,
-  "avg_pnl": 0.0089,
+  "winrate": 0.4802,
+  "total_pnl": 6.4187,
+  "avg_pnl": 0.0082,
   "shadow_bets": 548,
   "shadow_pnl": 12.5813,
   "shadow_winrate": 0.6369,
@@ -821,10 +821,24 @@
    7.4182,
    7.9107,
    7.4535,
-   6.9661
+   6.9661,
+   6.4187
   ]
  },
  "recent_trades": [
+  {
+   "ts": "2026-09-10T13:01:16.708936+00:00",
+   "asset": "ETH",
+   "ticker": "KXETH15M-26SEP100900-00",
+   "side": "YES",
+   "entry": 0.53,
+   "fee": 0.0174,
+   "prob": 0.6348,
+   "prev_ret": -0.00834,
+   "resolved_up": 0,
+   "pnl": -0.5474,
+   "shadow": false
+  },
   {
    "ts": "2026-09-10T13:01:11.996633+00:00",
    "asset": "BTC",
@@ -1201,19 +1215,6 @@
    "resolved_up": 0,
    "pnl": -0.5275,
    "shadow": false
-  },
-  {
-   "ts": "2026-09-09T09:31:10.250438+00:00",
-   "asset": "ETH",
-   "ticker": "KXETH15M-26SEP090530-30",
-   "side": "YES (G)",
-   "entry": 0.56,
-   "fee": 0.0172,
-   "prob": 0.5797,
-   "prev_ret": -0.00287,
-   "resolved_up": 0,
-   "pnl": -0.5772,
-   "shadow": true
   }
  ],
  "openings": [
@@ -2183,15 +2184,6 @@
   "no_signal": 11711
  },
  "pending": {
-  "('ETH', '2026-09-10T13:00:00Z')": {
-   "asset": "ETH",
-   "ticker": "KXETH15M-26SEP100900-00",
-   "close_iso": "2026-09-10T13:00:00Z",
-   "side": "YES",
-   "entry": 0.53,
-   "prob": 0.6348,
-   "prev_ret": -0.00834
-  },
   "('BTC', '2026-09-10T13:15:00Z')": {
    "asset": "BTC",
    "ticker": "KXBTC15M-26SEP100915-15",
@@ -20303,6 +20295,19 @@
    "resolved_up": 0,
    "pnl": -0.5574,
    "shadow": true
+  },
+  {
+   "ts": "2026-09-10T13:01:16.708936+00:00",
+   "asset": "ETH",
+   "ticker": "KXETH15M-26SEP100900-00",
+   "side": "YES",
+   "entry": 0.53,
+   "fee": 0.0174,
+   "prob": 0.6348,
+   "prev_ret": -0.00834,
+   "resolved_up": 0,
+   "pnl": -0.5474,
+   "shadow": false
   }
  ]
 }
