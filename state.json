@@ -1,31 +1,31 @@
 {
- "updated": "2026-09-10T12:00:17.793941+00:00",
+ "updated": "2026-09-10T12:01:53.290635+00:00",
  "campaign_deadline": null,
  "mode": "PAPER (auto-entry, real Kalshi ask + real settlement)",
  "strategy": "extreme-tails 10% + model confirm | Kalshi 15m",
  "current": {
   "BTC": {
-   "ticker": "KXBTC15M-26SEP100800-00",
-   "window_end": "2026-09-10T12:00:00Z",
-   "secs_in": 887,
-   "prob_up": 0.5131,
-   "prev_ret": -6e-05,
-   "tail_lo": -0.00161,
+   "ticker": "KXBTC15M-26SEP100815-15",
+   "window_end": "2026-09-10T12:15:00Z",
+   "secs_in": 113,
+   "prob_up": 0.5588,
+   "prev_ret": -0.00182,
+   "tail_lo": -0.00162,
    "tail_hi": 0.00159,
-   "yes_ask": 0.001,
-   "no_ask": 1.0,
-   "signal": "WAIT"
+   "yes_ask": 0.44,
+   "no_ask": 0.57,
+   "signal": "ENTER YES @ 0.44"
   },
   "ETH": {
    "ticker": "KXETH15M-26SEP100815-15",
    "window_end": "2026-09-10T12:15:00Z",
-   "secs_in": 17,
+   "secs_in": 113,
    "prob_up": 0.5662,
    "prev_ret": -0.00038,
    "tail_lo": -0.00195,
    "tail_hi": 0.00211,
-   "yes_ask": 0.5,
-   "no_ask": 0.51,
+   "yes_ask": 0.39,
+   "no_ask": 0.62,
    "signal": "WAIT"
   }
  },
@@ -1218,14 +1218,6 @@
  ],
  "openings": [
   {
-   "asset": "ETH",
-   "window_end": "2026-09-09T19:15:00Z",
-   "yes_ask": 0.4,
-   "no_ask": 0.61,
-   "prev_ret": -0.00239,
-   "secs_in": 48
-  },
-  {
    "asset": "BTC",
    "window_end": "2026-09-09T19:30:00Z",
    "yes_ask": 0.48,
@@ -2176,13 +2168,32 @@
    "no_ask": 0.51,
    "prev_ret": -0.00038,
    "secs_in": 17
+  },
+  {
+   "asset": "BTC",
+   "window_end": "2026-09-10T12:15:00Z",
+   "yes_ask": 0.54,
+   "no_ask": 0.47,
+   "prev_ret": -0.00182,
+   "secs_in": 52
   }
  ],
  "skips": {
-  "price": 547,
+  "price": 548,
   "no_signal": 11707
  },
- "pending": {},
+ "pending": {
+  "('BTC', '2026-09-10T12:15:00Z')": {
+   "asset": "BTC",
+   "ticker": "KXBTC15M-26SEP100815-15",
+   "close_iso": "2026-09-10T12:15:00Z",
+   "side": "YES",
+   "entry": 0.54,
+   "prob": 0.5588,
+   "prev_ret": -0.00182,
+   "shadow": true
+  }
+ },
  "seen": [
   [
    "ETH",
