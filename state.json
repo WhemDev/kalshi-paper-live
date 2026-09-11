@@ -1,29 +1,29 @@
 {
- "updated": "2026-09-11T15:30:20.360792+00:00",
+ "updated": "2026-09-11T15:31:55.682967+00:00",
  "campaign_deadline": null,
  "mode": "PAPER (auto-entry, real Kalshi ask + real settlement)",
  "strategy": "extreme-tails 10% + model confirm | Kalshi 15m",
  "current": {
   "BTC": {
-   "ticker": "KXBTC15M-26SEP111130-30",
-   "window_end": "2026-09-11T15:30:00Z",
-   "secs_in": 889,
-   "prob_up": 0.4636,
-   "prev_ret": -0.0036,
+   "ticker": "KXBTC15M-26SEP111145-45",
+   "window_end": "2026-09-11T15:45:00Z",
+   "secs_in": 115,
+   "prob_up": 0.468,
+   "prev_ret": 0.00297,
    "tail_lo": -0.00176,
-   "tail_hi": 0.00181,
-   "yes_ask": 1.0,
-   "no_ask": 0.001,
-   "signal": "WAIT"
+   "tail_hi": 0.00182,
+   "yes_ask": 0.54,
+   "no_ask": 0.47,
+   "signal": "ENTER NO @ 0.47"
   },
   "ETH": {
    "ticker": "KXETH15M-26SEP111145-45",
    "window_end": "2026-09-11T15:45:00Z",
-   "secs_in": 20,
+   "secs_in": 115,
    "prob_up": 0.3585,
    "prev_ret": 0.00338,
    "tail_lo": -0.00215,
-   "tail_hi": 0.00246,
+   "tail_hi": 0.00247,
    "yes_ask": 0.45,
    "no_ask": 0.56,
    "signal": "ENTER NO @ 0.56"
@@ -1236,14 +1236,6 @@
  ],
  "openings": [
   {
-   "asset": "ETH",
-   "window_end": "2026-09-11T00:45:00Z",
-   "yes_ask": 0.4,
-   "no_ask": 0.61,
-   "prev_ret": 0.00105,
-   "secs_in": 62
-  },
-  {
    "asset": "BTC",
    "window_end": "2026-09-11T01:00:00Z",
    "yes_ask": 0.49,
@@ -2194,10 +2186,18 @@
    "no_ask": 0.56,
    "prev_ret": 0.00338,
    "secs_in": 20
+  },
+  {
+   "asset": "BTC",
+   "window_end": "2026-09-11T15:45:00Z",
+   "yes_ask": 0.39,
+   "no_ask": 0.62,
+   "prev_ret": 0.00297,
+   "secs_in": 53
   }
  ],
  "skips": {
-  "price": 563,
+  "price": 564,
   "no_signal": 11893
  },
  "pending": {
@@ -2209,6 +2209,16 @@
    "entry": 0.56,
    "prob": 0.3585,
    "prev_ret": 0.00338,
+   "shadow": true
+  },
+  "('BTC', '2026-09-11T15:45:00Z')": {
+   "asset": "BTC",
+   "ticker": "KXBTC15M-26SEP111145-45",
+   "close_iso": "2026-09-11T15:45:00Z",
+   "side": "NO",
+   "entry": 0.62,
+   "prob": 0.468,
+   "prev_ret": 0.00297,
    "shadow": true
   }
  },
