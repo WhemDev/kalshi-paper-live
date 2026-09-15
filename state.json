@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-15T18:58:51.428345+00:00",
+ "updated": "2026-09-15T19:00:25.861233+00:00",
  "campaign_deadline": null,
  "mode": "PAPER (auto-entry, real Kalshi ask + real settlement)",
  "strategy": "extreme-tails 10% + model confirm | Kalshi 15m",
@@ -7,26 +7,26 @@
   "BTC": {
    "ticker": "KXBTC15M-26SEP151500-00",
    "window_end": "2026-09-15T19:00:00Z",
-   "secs_in": 831,
+   "secs_in": 895,
    "prob_up": 0.6195,
    "prev_ret": -0.01467,
-   "tail_lo": -0.00165,
+   "tail_lo": -0.00166,
    "tail_hi": 0.00186,
-   "yes_ask": 0.88,
-   "no_ask": 0.13,
+   "yes_ask": 0.997,
+   "no_ask": 0.004,
    "signal": "signal-but-late"
   },
   "ETH": {
-   "ticker": "KXETH15M-26SEP151500-00",
-   "window_end": "2026-09-15T19:00:00Z",
-   "secs_in": 831,
-   "prob_up": 0.6361,
-   "prev_ret": -0.01808,
+   "ticker": "KXETH15M-26SEP151515-15",
+   "window_end": "2026-09-15T19:15:00Z",
+   "secs_in": 25,
+   "prob_up": 0.4381,
+   "prev_ret": 0.0055,
    "tail_lo": -0.00231,
    "tail_hi": 0.00238,
-   "yes_ask": 0.967,
-   "no_ask": 0.042,
-   "signal": "signal-but-late"
+   "yes_ask": 0.5,
+   "no_ask": 0.65,
+   "signal": "ENTER NO @ 0.65"
   }
  },
  "stats": {
@@ -1278,14 +1278,6 @@
  ],
  "openings": [
   {
-   "asset": "ETH",
-   "window_end": "2026-09-15T04:15:00Z",
-   "yes_ask": 0.45,
-   "no_ask": 0.56,
-   "prev_ret": -0.0023,
-   "secs_in": 29
-  },
-  {
    "asset": "BTC",
    "window_end": "2026-09-15T04:15:00Z",
    "yes_ask": 0.62,
@@ -2236,10 +2228,18 @@
    "no_ask": 0.58,
    "prev_ret": -0.01808,
    "secs_in": 69
+  },
+  {
+   "asset": "ETH",
+   "window_end": "2026-09-15T19:15:00Z",
+   "yes_ask": 0.5,
+   "no_ask": 0.65,
+   "prev_ret": 0.0055,
+   "secs_in": 25
   }
  ],
  "skips": {
-  "price": 606,
+  "price": 607,
   "no_signal": 12601
  },
  "pending": {
@@ -2260,6 +2260,16 @@
    "entry": 0.43,
    "prob": 0.6361,
    "prev_ret": -0.01808
+  },
+  "('ETH', '2026-09-15T19:15:00Z')": {
+   "asset": "ETH",
+   "ticker": "KXETH15M-26SEP151515-15",
+   "close_iso": "2026-09-15T19:15:00Z",
+   "side": "NO",
+   "entry": 0.65,
+   "prob": 0.4381,
+   "prev_ret": 0.0055,
+   "shadow": true
   }
  },
  "seen": [
