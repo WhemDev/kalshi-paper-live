@@ -1,31 +1,31 @@
 {
- "updated": "2026-09-16T20:15:23.815811+00:00",
+ "updated": "2026-09-16T20:16:59.021629+00:00",
  "campaign_deadline": null,
  "mode": "PAPER (auto-entry, real Kalshi ask + real settlement)",
  "strategy": "extreme-tails 10% + model confirm | Kalshi 15m",
  "current": {
   "BTC": {
-   "ticker": "KXBTC15M-26SEP161615-15",
-   "window_end": "2026-09-16T20:15:00Z",
-   "secs_in": 893,
-   "prob_up": 0.4485,
-   "prev_ret": 0.00123,
+   "ticker": "KXBTC15M-26SEP161630-30",
+   "window_end": "2026-09-16T20:30:00Z",
+   "secs_in": 118,
+   "prob_up": 0.4673,
+   "prev_ret": 0.00211,
    "tail_lo": -0.0017,
-   "tail_hi": 0.00182,
-   "yes_ask": 1.0,
-   "no_ask": 0.001,
-   "signal": "WAIT"
+   "tail_hi": 0.00183,
+   "yes_ask": 0.33,
+   "no_ask": 0.68,
+   "signal": "ENTER NO @ 0.68"
   },
   "ETH": {
    "ticker": "KXETH15M-26SEP161630-30",
    "window_end": "2026-09-16T20:30:00Z",
-   "secs_in": 23,
+   "secs_in": 119,
    "prob_up": 0.4708,
    "prev_ret": 0.00079,
    "tail_lo": -0.00239,
    "tail_hi": 0.00249,
-   "yes_ask": 0.46,
-   "no_ask": 0.55,
+   "yes_ask": 0.34,
+   "no_ask": 0.67,
    "signal": "WAIT"
   }
  },
@@ -1297,14 +1297,6 @@
  ],
  "openings": [
   {
-   "asset": "BTC",
-   "window_end": "2026-09-16T05:30:00Z",
-   "yes_ask": 0.52,
-   "no_ask": 0.49,
-   "prev_ret": -0.00088,
-   "secs_in": 48
-  },
-  {
    "asset": "ETH",
    "window_end": "2026-09-16T05:45:00Z",
    "yes_ask": 0.52,
@@ -2255,13 +2247,32 @@
    "no_ask": 0.55,
    "prev_ret": 0.00079,
    "secs_in": 23
+  },
+  {
+   "asset": "BTC",
+   "window_end": "2026-09-16T20:30:00Z",
+   "yes_ask": 0.45,
+   "no_ask": 0.56,
+   "prev_ret": 0.00211,
+   "secs_in": 57
   }
  ],
  "skips": {
-  "price": 621,
+  "price": 622,
   "no_signal": 12772
  },
- "pending": {},
+ "pending": {
+  "('BTC', '2026-09-16T20:30:00Z')": {
+   "asset": "BTC",
+   "ticker": "KXBTC15M-26SEP161630-30",
+   "close_iso": "2026-09-16T20:30:00Z",
+   "side": "NO",
+   "entry": 0.56,
+   "prob": 0.4673,
+   "prev_ret": 0.00211,
+   "shadow": true
+  }
+ },
  "seen": [
   [
    "BTC",
