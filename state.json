@@ -1,31 +1,31 @@
 {
- "updated": "2026-09-20T02:43:48.768490+00:00",
+ "updated": "2026-09-20T02:45:24.184946+00:00",
  "campaign_deadline": null,
  "mode": "PAPER (auto-entry, real Kalshi ask + real settlement)",
  "strategy": "extreme-tails 10% + model confirm | Kalshi 15m",
  "current": {
   "BTC": {
-   "ticker": "KXBTC15M-26SEP192245-45",
-   "window_end": "2026-09-20T02:45:00Z",
-   "secs_in": 828,
-   "prob_up": 0.5135,
-   "prev_ret": -0.00201,
-   "tail_lo": -0.00169,
+   "ticker": "KXBTC15M-26SEP192300-00",
+   "window_end": "2026-09-20T03:00:00Z",
+   "secs_in": 24,
+   "prob_up": 0.5485,
+   "prev_ret": -0.0053,
+   "tail_lo": -0.0017,
    "tail_hi": 0.00164,
-   "yes_ask": 0.002,
-   "no_ask": 0.999,
-   "signal": "WAIT"
+   "yes_ask": 0.34,
+   "no_ask": 0.67,
+   "signal": "ENTER YES @ 0.34"
   },
   "ETH": {
    "ticker": "KXETH15M-26SEP192245-45",
    "window_end": "2026-09-20T02:45:00Z",
-   "secs_in": 828,
+   "secs_in": 894,
    "prob_up": 0.5677,
    "prev_ret": -0.00306,
    "tail_lo": -0.00209,
    "tail_hi": 0.00216,
-   "yes_ask": 0.004,
-   "no_ask": 0.997,
+   "yes_ask": 0.001,
+   "no_ask": 1.0,
    "signal": "signal-but-late"
   }
  },
@@ -1328,14 +1328,6 @@
  ],
  "openings": [
   {
-   "asset": "BTC",
-   "window_end": "2026-09-19T12:00:00Z",
-   "yes_ask": 0.47,
-   "no_ask": 0.54,
-   "prev_ret": 0.00054,
-   "secs_in": 34
-  },
-  {
    "asset": "ETH",
    "window_end": "2026-09-19T12:00:00Z",
    "yes_ask": 0.57,
@@ -2286,6 +2278,14 @@
    "no_ask": 0.42,
    "prev_ret": -0.00306,
    "secs_in": 37
+  },
+  {
+   "asset": "BTC",
+   "window_end": "2026-09-20T03:00:00Z",
+   "yes_ask": 0.34,
+   "no_ask": 0.67,
+   "prev_ret": -0.0053,
+   "secs_in": 24
   }
  ],
  "skips": {
@@ -2302,6 +2302,15 @@
    "prob": 0.5677,
    "prev_ret": -0.00306,
    "shadow": true
+  },
+  "('BTC', '2026-09-20T03:00:00Z')": {
+   "asset": "BTC",
+   "ticker": "KXBTC15M-26SEP192300-00",
+   "close_iso": "2026-09-20T03:00:00Z",
+   "side": "YES",
+   "entry": 0.34,
+   "prob": 0.5485,
+   "prev_ret": -0.0053
   }
  },
  "seen": [
