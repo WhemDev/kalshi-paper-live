@@ -1,40 +1,40 @@
 {
- "updated": "2026-09-21T13:45:21.750716+00:00",
+ "updated": "2026-09-21T13:45:55.738221+00:00",
  "campaign_deadline": null,
  "mode": "PAPER (auto-entry, real Kalshi ask + real settlement)",
  "strategy": "extreme-tails 10% + model confirm | Kalshi 15m",
  "current": {
   "BTC": {
-   "ticker": "KXBTC15M-26SEP210945-45",
-   "window_end": "2026-09-21T13:45:00Z",
-   "secs_in": 890,
-   "prob_up": 0.5422,
-   "prev_ret": -0.00248,
+   "ticker": "KXBTC15M-26SEP211000-00",
+   "window_end": "2026-09-21T14:00:00Z",
+   "secs_in": 55,
+   "prob_up": 0.5442,
+   "prev_ret": 0.0013,
    "tail_lo": -0.00178,
    "tail_hi": 0.00192,
-   "yes_ask": 0.999,
-   "no_ask": 0.002,
-   "signal": "signal-but-late"
+   "yes_ask": 0.54,
+   "no_ask": 0.47,
+   "signal": "WAIT"
   },
   "ETH": {
    "ticker": "KXETH15M-26SEP211000-00",
    "window_end": "2026-09-21T14:00:00Z",
-   "secs_in": 21,
+   "secs_in": 56,
    "prob_up": 0.5713,
    "prev_ret": -0.00344,
    "tail_lo": -0.00206,
    "tail_hi": 0.00241,
-   "yes_ask": 0.51,
-   "no_ask": 0.51,
-   "signal": "ENTER YES @ 0.51"
+   "yes_ask": 0.7,
+   "no_ask": 0.31,
+   "signal": "ENTER YES @ 0.7"
   }
  },
  "stats": {
-  "bets": 915,
-  "wins": 446,
-  "winrate": 0.4874,
-  "total_pnl": 12.9414,
-  "avg_pnl": 0.0141,
+  "bets": 916,
+  "wins": 447,
+  "winrate": 0.488,
+  "total_pnl": 13.4842,
+  "avg_pnl": 0.0147,
   "shadow_bets": 663,
   "shadow_pnl": 15.7897,
   "shadow_winrate": 0.638,
@@ -954,10 +954,24 @@
    13.4034,
    13.8659,
    13.3986,
-   12.9414
+   12.9414,
+   13.4842
   ]
  },
  "recent_trades": [
+  {
+   "ts": "2026-09-21T13:45:55.737375+00:00",
+   "asset": "BTC",
+   "ticker": "KXBTC15M-26SEP210945-45",
+   "side": "YES",
+   "entry": 0.44,
+   "fee": 0.0172,
+   "prob": 0.5422,
+   "prev_ret": -0.00248,
+   "resolved_up": 1,
+   "pnl": 0.5428,
+   "shadow": false
+  },
   {
    "ts": "2026-09-21T11:31:00.077635+00:00",
    "asset": "BTC",
@@ -1334,30 +1348,9 @@
    "resolved_up": 0,
    "pnl": -0.5275,
    "shadow": false
-  },
-  {
-   "ts": "2026-09-20T18:01:09.377924+00:00",
-   "asset": "ETH",
-   "ticker": "KXETH15M-26SEP201400-00",
-   "side": "NO",
-   "entry": 0.42,
-   "fee": 0.0171,
-   "prob": 0.4708,
-   "prev_ret": 0.00462,
-   "resolved_up": 0,
-   "pnl": 0.5629,
-   "shadow": false
   }
  ],
  "openings": [
-  {
-   "asset": "BTC",
-   "window_end": "2026-09-20T23:00:00Z",
-   "yes_ask": 0.42,
-   "no_ask": 0.59,
-   "prev_ret": -0.00022,
-   "secs_in": 57
-  },
   {
    "asset": "BTC",
    "window_end": "2026-09-20T23:15:00Z",
@@ -2309,22 +2302,21 @@
    "no_ask": 0.51,
    "prev_ret": -0.00344,
    "secs_in": 21
+  },
+  {
+   "asset": "BTC",
+   "window_end": "2026-09-21T14:00:00Z",
+   "yes_ask": 0.54,
+   "no_ask": 0.47,
+   "prev_ret": 0.0013,
+   "secs_in": 55
   }
  ],
  "skips": {
   "price": 664,
-  "no_signal": 13565
+  "no_signal": 13566
  },
  "pending": {
-  "('BTC', '2026-09-21T13:45:00Z')": {
-   "asset": "BTC",
-   "ticker": "KXBTC15M-26SEP210945-45",
-   "close_iso": "2026-09-21T13:45:00Z",
-   "side": "YES",
-   "entry": 0.44,
-   "prob": 0.5422,
-   "prev_ret": -0.00248
-  },
   "('ETH', '2026-09-21T14:00:00Z')": {
    "asset": "ETH",
    "ticker": "KXETH15M-26SEP211000-00",
@@ -2336,14 +2328,6 @@
   }
  },
  "seen": [
-  [
-   "ETH",
-   "2026-09-19T22:30:00Z"
-  ],
-  [
-   "ETH",
-   "2026-09-21T13:45:00Z"
-  ],
   [
    "BTC",
    "2026-09-20T23:00:00Z"
@@ -2773,6 +2757,10 @@
    "2026-09-21T01:45:00Z"
   ],
   [
+   "BTC",
+   "2026-09-21T14:00:00Z"
+  ],
+  [
    "ETH",
    "2026-09-18T20:15:00Z"
   ],
@@ -2903,6 +2891,10 @@
   [
    "BTC",
    "2026-09-20T15:45:00Z"
+  ],
+  [
+   "BTC",
+   "2026-09-21T13:45:00Z"
   ],
   [
    "ETH",
@@ -23649,6 +23641,19 @@
    "resolved_up": 1,
    "pnl": -0.705,
    "shadow": true
+  },
+  {
+   "ts": "2026-09-21T13:45:55.737375+00:00",
+   "asset": "BTC",
+   "ticker": "KXBTC15M-26SEP210945-45",
+   "side": "YES",
+   "entry": 0.44,
+   "fee": 0.0172,
+   "prob": 0.5422,
+   "prev_ret": -0.00248,
+   "resolved_up": 1,
+   "pnl": 0.5428,
+   "shadow": false
   }
  ]
 }
