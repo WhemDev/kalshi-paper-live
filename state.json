@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-22T16:13:48.782570+00:00",
+ "updated": "2026-09-22T16:15:23.712662+00:00",
  "campaign_deadline": null,
  "mode": "PAPER (auto-entry, real Kalshi ask + real settlement)",
  "strategy": "extreme-tails 10% + model confirm | Kalshi 15m",
@@ -7,26 +7,26 @@
   "BTC": {
    "ticker": "KXBTC15M-26SEP221215-15",
    "window_end": "2026-09-22T16:15:00Z",
-   "secs_in": 828,
+   "secs_in": 893,
    "prob_up": 0.5151,
    "prev_ret": -0.00158,
    "tail_lo": -0.00168,
    "tail_hi": 0.0019,
-   "yes_ask": 0.003,
-   "no_ask": 0.998,
+   "yes_ask": 0.001,
+   "no_ask": 1.0,
    "signal": "WAIT"
   },
   "ETH": {
-   "ticker": "KXETH15M-26SEP221215-15",
-   "window_end": "2026-09-22T16:15:00Z",
-   "secs_in": 828,
-   "prob_up": 0.5442,
-   "prev_ret": -0.00255,
-   "tail_lo": -0.00231,
+   "ticker": "KXETH15M-26SEP221230-30",
+   "window_end": "2026-09-22T16:30:00Z",
+   "secs_in": 24,
+   "prob_up": 0.5507,
+   "prev_ret": -0.00439,
+   "tail_lo": -0.00232,
    "tail_hi": 0.00247,
-   "yes_ask": 0.002,
-   "no_ask": 0.999,
-   "signal": "signal-but-late"
+   "yes_ask": 0.54,
+   "no_ask": 0.47,
+   "signal": "ENTER YES @ 0.54"
   }
  },
  "stats": {
@@ -1365,14 +1365,6 @@
  ],
  "openings": [
   {
-   "asset": "BTC",
-   "window_end": "2026-09-22T01:30:00Z",
-   "yes_ask": 0.55,
-   "no_ask": 0.46,
-   "prev_ret": -0.00242,
-   "secs_in": 40
-  },
-  {
    "asset": "ETH",
    "window_end": "2026-09-22T01:30:00Z",
    "yes_ask": 0.57,
@@ -2323,10 +2315,18 @@
    "no_ask": 0.47,
    "prev_ret": -0.00255,
    "secs_in": 33
+  },
+  {
+   "asset": "ETH",
+   "window_end": "2026-09-22T16:30:00Z",
+   "yes_ask": 0.54,
+   "no_ask": 0.47,
+   "prev_ret": -0.00439,
+   "secs_in": 24
   }
  ],
  "skips": {
-  "price": 679,
+  "price": 680,
   "no_signal": 13749
  },
  "pending": {
@@ -2338,6 +2338,16 @@
    "entry": 0.54,
    "prob": 0.5442,
    "prev_ret": -0.00255,
+   "shadow": true
+  },
+  "('ETH', '2026-09-22T16:30:00Z')": {
+   "asset": "ETH",
+   "ticker": "KXETH15M-26SEP221230-30",
+   "close_iso": "2026-09-22T16:30:00Z",
+   "side": "YES",
+   "entry": 0.54,
+   "prob": 0.5507,
+   "prev_ret": -0.00439,
    "shadow": true
   }
  },
