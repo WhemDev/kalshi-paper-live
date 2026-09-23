@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-23T05:30:33.614607+00:00",
+ "updated": "2026-09-23T05:31:07.697310+00:00",
  "campaign_deadline": null,
  "mode": "PAPER (auto-entry, real Kalshi ask + real settlement)",
  "strategy": "extreme-tails 10% + model confirm | Kalshi 15m",
@@ -7,34 +7,34 @@
   "BTC": {
    "ticker": "KXBTC15M-26SEP230145-45",
    "window_end": "2026-09-23T05:45:00Z",
-   "secs_in": 33,
+   "secs_in": 67,
    "prob_up": 0.5404,
    "prev_ret": -0.00207,
    "tail_lo": -0.00173,
    "tail_hi": 0.00198,
-   "yes_ask": 0.48,
-   "no_ask": 0.53,
-   "signal": "ENTER YES @ 0.48"
+   "yes_ask": 0.49,
+   "no_ask": 0.52,
+   "signal": "ENTER YES @ 0.49"
   },
   "ETH": {
-   "ticker": "KXETH15M-26SEP230130-30",
-   "window_end": "2026-09-23T05:30:00Z",
-   "secs_in": 873,
-   "prob_up": 0.5655,
-   "prev_ret": -0.00224,
+   "ticker": "KXETH15M-26SEP230145-45",
+   "window_end": "2026-09-23T05:45:00Z",
+   "secs_in": 67,
+   "prob_up": 0.5586,
+   "prev_ret": -0.00181,
    "tail_lo": -0.00219,
    "tail_hi": 0.00233,
-   "yes_ask": 0.001,
-   "no_ask": 1.0,
-   "signal": "signal-but-late"
+   "yes_ask": 0.46,
+   "no_ask": 0.55,
+   "signal": "WAIT"
   }
  },
  "stats": {
-  "bets": 936,
+  "bets": 937,
   "wins": 461,
-  "winrate": 0.4925,
-  "total_pnl": 17.9409,
-  "avg_pnl": 0.0192,
+  "winrate": 0.492,
+  "total_pnl": 17.4635,
+  "avg_pnl": 0.0186,
   "shadow_bets": 683,
   "shadow_pnl": 17.7528,
   "shadow_winrate": 0.6398,
@@ -975,10 +975,24 @@
    18.3828,
    17.8553,
    17.3981,
-   17.9409
+   17.9409,
+   17.4635
   ]
  },
  "recent_trades": [
+  {
+   "ts": "2026-09-23T05:31:07.696584+00:00",
+   "asset": "ETH",
+   "ticker": "KXETH15M-26SEP230130-30",
+   "side": "YES",
+   "entry": 0.46,
+   "fee": 0.0174,
+   "prob": 0.5655,
+   "prev_ret": -0.00224,
+   "resolved_up": 0,
+   "pnl": -0.4774,
+   "shadow": false
+  },
   {
    "ts": "2026-09-23T04:16:03.099663+00:00",
    "asset": "ETH",
@@ -1355,30 +1369,9 @@
    "resolved_up": 0,
    "pnl": 0.4426,
    "shadow": true
-  },
-  {
-   "ts": "2026-09-21T23:31:01.732146+00:00",
-   "asset": "BTC",
-   "ticker": "KXBTC15M-26SEP211930-30",
-   "side": "NO",
-   "entry": 0.5,
-   "fee": 0.0175,
-   "prob": 0.4718,
-   "prev_ret": 0.00245,
-   "resolved_up": 0,
-   "pnl": 0.4825,
-   "shadow": false
   }
  ],
  "openings": [
-  {
-   "asset": "ETH",
-   "window_end": "2026-09-22T14:45:00Z",
-   "yes_ask": 0.31,
-   "no_ask": 0.7,
-   "prev_ret": -0.00411,
-   "secs_in": 43
-  },
   {
    "asset": "BTC",
    "window_end": "2026-09-22T15:00:00Z",
@@ -2330,22 +2323,21 @@
    "no_ask": 0.53,
    "prev_ret": -0.00207,
    "secs_in": 33
+  },
+  {
+   "asset": "ETH",
+   "window_end": "2026-09-23T05:45:00Z",
+   "yes_ask": 0.46,
+   "no_ask": 0.55,
+   "prev_ret": -0.00181,
+   "secs_in": 67
   }
  ],
  "skips": {
   "price": 684,
-  "no_signal": 13842
+  "no_signal": 13843
  },
  "pending": {
-  "('ETH', '2026-09-23T05:30:00Z')": {
-   "asset": "ETH",
-   "ticker": "KXETH15M-26SEP230130-30",
-   "close_iso": "2026-09-23T05:30:00Z",
-   "side": "YES",
-   "entry": 0.46,
-   "prob": 0.5655,
-   "prev_ret": -0.00224
-  },
   "('BTC', '2026-09-23T05:45:00Z')": {
    "asset": "BTC",
    "ticker": "KXBTC15M-26SEP230145-45",
@@ -2357,14 +2349,6 @@
   }
  },
  "seen": [
-  [
-   "ETH",
-   "2026-09-23T03:30:00Z"
-  ],
-  [
-   "BTC",
-   "2026-09-23T05:15:00Z"
-  ],
   [
    "BTC",
    "2026-09-22T21:15:00Z"
@@ -2536,6 +2520,10 @@
   [
    "ETH",
    "2026-09-22T01:00:00Z"
+  ],
+  [
+   "ETH",
+   "2026-09-23T05:45:00Z"
   ],
   [
    "BTC",
@@ -2720,6 +2708,10 @@
   [
    "ETH",
    "2026-09-22T08:45:00Z"
+  ],
+  [
+   "ETH",
+   "2026-09-23T05:30:00Z"
   ],
   [
    "BTC",
@@ -24202,6 +24194,19 @@
    "prev_ret": -0.00248,
    "resolved_up": 1,
    "pnl": 0.5428,
+   "shadow": false
+  },
+  {
+   "ts": "2026-09-23T05:31:07.696584+00:00",
+   "asset": "ETH",
+   "ticker": "KXETH15M-26SEP230130-30",
+   "side": "YES",
+   "entry": 0.46,
+   "fee": 0.0174,
+   "prob": 0.5655,
+   "prev_ret": -0.00224,
+   "resolved_up": 0,
+   "pnl": -0.4774,
    "shadow": false
   }
  ]
