@@ -1,32 +1,32 @@
 {
- "updated": "2026-09-24T09:45:16.643246+00:00",
+ "updated": "2026-09-24T09:46:51.939986+00:00",
  "campaign_deadline": null,
  "mode": "PAPER (auto-entry, real Kalshi ask + real settlement)",
  "strategy": "extreme-tails 10% + model confirm | Kalshi 15m",
  "current": {
   "BTC": {
-   "ticker": "KXBTC15M-26SEP240545-45",
-   "window_end": "2026-09-24T09:45:00Z",
-   "secs_in": 886,
-   "prob_up": 0.5529,
-   "prev_ret": -0.00159,
-   "tail_lo": -0.00179,
-   "tail_hi": 0.00182,
-   "yes_ask": 0.001,
-   "no_ask": 1.0,
-   "signal": "WAIT"
+   "ticker": "KXBTC15M-26SEP240600-00",
+   "window_end": "2026-09-24T10:00:00Z",
+   "secs_in": 111,
+   "prob_up": 0.5555,
+   "prev_ret": -0.00248,
+   "tail_lo": -0.0018,
+   "tail_hi": 0.00181,
+   "yes_ask": 0.39,
+   "no_ask": 0.62,
+   "signal": "ENTER YES @ 0.39"
   },
   "ETH": {
    "ticker": "KXETH15M-26SEP240600-00",
    "window_end": "2026-09-24T10:00:00Z",
-   "secs_in": 16,
+   "secs_in": 112,
    "prob_up": 0.6133,
    "prev_ret": -0.00456,
    "tail_lo": -0.00225,
    "tail_hi": 0.00236,
-   "yes_ask": 0.49,
-   "no_ask": 0.52,
-   "signal": "ENTER YES @ 0.49"
+   "yes_ask": 0.37,
+   "no_ask": 0.64,
+   "signal": "ENTER YES @ 0.37"
   }
  },
  "stats": {
@@ -1397,14 +1397,6 @@
  ],
  "openings": [
   {
-   "asset": "ETH",
-   "window_end": "2026-09-23T17:00:00Z",
-   "yes_ask": 0.49,
-   "no_ask": 0.52,
-   "prev_ret": -0.00125,
-   "secs_in": 17
-  },
-  {
    "asset": "BTC",
    "window_end": "2026-09-23T17:15:00Z",
    "yes_ask": 0.55,
@@ -2355,10 +2347,18 @@
    "no_ask": 0.52,
    "prev_ret": -0.00456,
    "secs_in": 16
+  },
+  {
+   "asset": "BTC",
+   "window_end": "2026-09-24T10:00:00Z",
+   "yes_ask": 0.63,
+   "no_ask": 0.38,
+   "prev_ret": -0.00248,
+   "secs_in": 50
   }
  ],
  "skips": {
-  "price": 698,
+  "price": 699,
   "no_signal": 14014
  },
  "pending": {
@@ -2370,6 +2370,16 @@
    "entry": 0.49,
    "prob": 0.6133,
    "prev_ret": -0.00456
+  },
+  "('BTC', '2026-09-24T10:00:00Z')": {
+   "asset": "BTC",
+   "ticker": "KXBTC15M-26SEP240600-00",
+   "close_iso": "2026-09-24T10:00:00Z",
+   "side": "YES",
+   "entry": 0.63,
+   "prob": 0.5555,
+   "prev_ret": -0.00248,
+   "shadow": true
   }
  },
  "seen": [
