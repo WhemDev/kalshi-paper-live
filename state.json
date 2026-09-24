@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-24T09:43:41.500146+00:00",
+ "updated": "2026-09-24T09:45:16.643246+00:00",
  "campaign_deadline": null,
  "mode": "PAPER (auto-entry, real Kalshi ask + real settlement)",
  "strategy": "extreme-tails 10% + model confirm | Kalshi 15m",
@@ -7,26 +7,26 @@
   "BTC": {
    "ticker": "KXBTC15M-26SEP240545-45",
    "window_end": "2026-09-24T09:45:00Z",
-   "secs_in": 821,
+   "secs_in": 886,
    "prob_up": 0.5529,
    "prev_ret": -0.00159,
    "tail_lo": -0.00179,
    "tail_hi": 0.00182,
-   "yes_ask": 0.006,
-   "no_ask": 0.995,
+   "yes_ask": 0.001,
+   "no_ask": 1.0,
    "signal": "WAIT"
   },
   "ETH": {
-   "ticker": "KXETH15M-26SEP240545-45",
-   "window_end": "2026-09-24T09:45:00Z",
-   "secs_in": 821,
-   "prob_up": 0.5825,
-   "prev_ret": -0.00225,
+   "ticker": "KXETH15M-26SEP240600-00",
+   "window_end": "2026-09-24T10:00:00Z",
+   "secs_in": 16,
+   "prob_up": 0.6133,
+   "prev_ret": -0.00456,
    "tail_lo": -0.00225,
    "tail_hi": 0.00236,
-   "yes_ask": 0.002,
-   "no_ask": 0.999,
-   "signal": "WAIT"
+   "yes_ask": 0.49,
+   "no_ask": 0.52,
+   "signal": "ENTER YES @ 0.49"
   }
  },
  "stats": {
@@ -1397,14 +1397,6 @@
  ],
  "openings": [
   {
-   "asset": "BTC",
-   "window_end": "2026-09-23T17:00:00Z",
-   "yes_ask": 0.49,
-   "no_ask": 0.52,
-   "prev_ret": -0.00212,
-   "secs_in": 17
-  },
-  {
    "asset": "ETH",
    "window_end": "2026-09-23T17:00:00Z",
    "yes_ask": 0.49,
@@ -2355,13 +2347,31 @@
    "no_ask": 0.75,
    "prev_ret": -0.00159,
    "secs_in": 56
+  },
+  {
+   "asset": "ETH",
+   "window_end": "2026-09-24T10:00:00Z",
+   "yes_ask": 0.49,
+   "no_ask": 0.52,
+   "prev_ret": -0.00456,
+   "secs_in": 16
   }
  ],
  "skips": {
   "price": 698,
   "no_signal": 14014
  },
- "pending": {},
+ "pending": {
+  "('ETH', '2026-09-24T10:00:00Z')": {
+   "asset": "ETH",
+   "ticker": "KXETH15M-26SEP240600-00",
+   "close_iso": "2026-09-24T10:00:00Z",
+   "side": "YES",
+   "entry": 0.49,
+   "prob": 0.6133,
+   "prev_ret": -0.00456
+  }
+ },
  "seen": [
   [
    "BTC",
